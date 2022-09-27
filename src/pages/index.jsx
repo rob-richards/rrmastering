@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import { Form } from '@/components/Form'
 import {
   TwitterIcon,
   InstagramIcon,
@@ -306,6 +307,7 @@ export default function Home({ articles }) {
             <Resume />
           </div>
         </div>
+        <Form />
       </Container>
     </>
   )
