@@ -9,7 +9,7 @@ export default function Form() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
+    <div className="overflow-hidden bg-white pt-16 px-4 sm:px-6 lg:px-8 lg:pt-24">
       <div className="relative mx-auto max-w-xl">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Book a Session</h2>
@@ -95,7 +95,7 @@ export default function Form() {
                 type="submit"
                 className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                Let's talk
+                Book Now
               </button>
             </div>
           </form>

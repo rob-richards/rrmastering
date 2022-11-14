@@ -11,13 +11,19 @@ import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import image6 from '@/images/photos/image-5.jpg'
+import image7 from '@/images/clients/minus-expenses-flavor-of-the-week.jpeg'
+import image8 from '@/images/clients/meredith-boyce-lesson-learned.jpeg'
+import image9 from '@/images/clients/darien-noel-laidback-fisherman-2.jpeg'
+import image10 from '@/images/clients/zach-sines-alone.jpeg'
+import image11 from '@/images/clients/zach-sines-empty-cups-acoustic.jpeg'
+import image12 from '@/images/clients/zach-sines-empty-cups.jpeg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 
 function Hero() {
   return (
     <>
-      <div class="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-5 gap-4">
         <div className="col-start-1 col-span-5 md:col-span-3 md:col-start-2">
           <h1 className="text-4xl text-center font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl w-full">
             I make music sound like a record, everywhere.
@@ -38,12 +44,12 @@ function Hero() {
 function Photos() {
   return (
     <div className="mt-0">
-      <div className="-my-4 flex justify-center gap-0 overflow-hidden py-4 sm:gap-1">
+      <div className="-my-4 flex justify-center gap-0 overflow-hidden py-4 sm:gap-0">
         {[image1, image2, image3, image4, image5, image6].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
+              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
             )}
           >
             <Image
@@ -56,12 +62,12 @@ function Photos() {
         ))}
       </div>
 
-      <div className="-my-4 flex justify-center gap-0 overflow-hidden py-4 sm:gap-1">
-        {[image1, image2, image3, image4, image5, image6].map((image, imageIndex) => (
+      <div className="-my-4 flex justify-center gap-0 overflow-hidden py-4 sm:gap-0">
+        {[image7, image8, image9, image10, image11, image12].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
+              'relative aspect-[9/10] w-72 flex-none overflow-hidden'
             )}
           >
             <Image
@@ -89,7 +95,7 @@ export default function Home({ articles }) {
           content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
       </Head>
-      <Container className="flex mt-16 md:mt-32 mb-16 w-full">
+      <Container className="flex mt-16 md:mt-32 mb-24 w-full">
         <Hero />
       </Container>
       <Photos />
