@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { Form } from '@/components/Form'
+import { SimpleLayout } from '@/components/SimpleLayout'
 import {
   TwitterIcon,
   InstagramIcon,
@@ -221,9 +222,30 @@ function Resume() {
   )
 }
 
+function Hero() {
+  return (
+    <>
+      <div class="grid grid-cols-5 gap-4">
+        <div className="col-start-1 col-span-5 md:col-span-3 md:col-start-2">
+          <h1 className="text-4xl text-center font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl w-full">
+            I make music sound like a record, everywhere.
+          </h1>
+        </div>
+      </div>
+      <div className="grid md:grid-cols-5 grid-cols-3 gap-4 mt-12 justify-items-center">
+        <div className="col-start-2 md:col-start-3">
+          <Button type="submit" className="ml-0 flex-none bg-indigo-600 hover:bg-indigo-700">
+            Book Now
+          </Button>
+        </div>
+      </div>
+    </>
+  )
+}
+
 function Photos() {
   return (
-    <div className="mt-16 sm:mt-20">
+    <div className="mt-0">
       <div className="-my-4 flex justify-center gap-0 overflow-hidden py-4 sm:gap-1">
         {[image1, image2, image3, image4, image5, image6].map((image, imageIndex) => (
           <div
@@ -268,51 +290,19 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
+          Rob Richards Mastering - Mastering Engineer from Nashville, TN
         </title>
         <meta
           name="description"
           content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
       </Head>
-      <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-          </div>
-        </div>
+      <Container className="flex mt-16 md:mt-32 mb-16 w-full">
+        <Hero />
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+      <Container className="mt-0">
+        {/* <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
@@ -322,7 +312,7 @@ export default function Home({ articles }) {
             <Newsletter />
             <Resume />
           </div>
-        </div>
+        </div> */}
         <Form />
       </Container>
     </>
