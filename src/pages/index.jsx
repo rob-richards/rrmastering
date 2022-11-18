@@ -26,7 +26,7 @@ function Hero() {
       <div className="grid grid-cols-5 gap-4">
         <div className="col-start-1 col-span-5 md:col-span-3 md:col-start-2">
           <h1 className="text-4xl text-center font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl w-full">
-            I make music sound like a record, everywhere.
+            I make music sound amazing everywhere it's heard.
           </h1>
         </div>
       </div>
@@ -44,7 +44,7 @@ function Hero() {
 function Photos() {
   return (
     <div className="mt-0">
-      <div className="-my-4 flex justify-center gap-0 overflow-hidden py-4 sm:gap-0">
+      <div className="flex justify-center gap-0 overflow-hidden sm:gap-0">
         {[image1, image2, image3, image4, image5, image6].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -62,8 +62,8 @@ function Photos() {
         ))}
       </div>
 
-      <div className="-my-4 flex justify-center gap-0 overflow-hidden py-4 sm:gap-0">
-        {[image7, image8, image9, image10, image11, image12].map((image, imageIndex) => (
+      <div className="flex justify-center gap-0 overflow-hidden sm:gap-0">
+        {[image7, image8, image9, image10, image11].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(

@@ -1,9 +1,22 @@
+const colors = require('tailwindcss/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
+    colors: {
+      current: 'currentColor',
+      transparent: 'transparent',
+      'white': '#ffffff',
+      gray: colors.gray,
+      zinc: colors.zinc,
+      pink: colors.pink,
+      teal: colors.teal,
+      sky: colors.sky,
+      indigo: colors.indigo,
+    },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
