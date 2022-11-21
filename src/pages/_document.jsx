@@ -39,7 +39,6 @@ export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
       <Head>
-        <script dangerouslySetInnerHTML={{ __html: modeScript }} />
         <link
           rel="alternate"
           type="application/rss+xml"
