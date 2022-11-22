@@ -5,16 +5,26 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import Form from '@/components/Form'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
+import image1 from '@/images/clients/ellrose.jpeg'
+import image2 from '@/images/clients/darien-noel-wedding-rings.jpeg'
+import image3 from '@/images/clients/cloudly-too-good.jpeg'
+import image4 from '@/images/clients/cb-worship.jpeg'
 import image5 from '@/images/clients/zach-sines-empty-cups.jpeg'
 import image7 from '@/images/clients/minus-expenses-flavor-of-the-week.jpeg'
 import image8 from '@/images/clients/meredith-boyce-lesson-learned.jpeg'
 import image9 from '@/images/clients/darien-noel-laidback-fisherman-2.jpeg'
 import image10 from '@/images/clients/zach-sines-alone.jpeg'
 import image11 from '@/images/clients/zach-sines-empty-cups-acoustic.jpeg'
+import image12 from '@/images/clients/darien-noel-laidback-fisherman.jpeg'
+import image13 from '@/images/clients/untitled-worship-shouldnt-have.jpeg'
+import image14 from '@/images/clients/frisbee-club-carwash-kiss.jpeg'
+import image15 from '@/images/clients/jonathan-murray.jpeg'
+import image16 from '@/images/clients/yugo-tragic.jpeg'
+import image17 from '@/images/clients/lance.jpeg'
+import image18 from '@/images/clients/untitled-live.jpeg'
+import image19 from '@/images/clients/maddison-lopez-cotton-candy.jpeg'
+import image20 from '@/images/clients/the-empire.jpeg'
+import image21 from '@/images/clients/meredith-boyce.jpeg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 
@@ -42,7 +52,7 @@ function Hero() {
 function Photos() {
   return (
     <div className="mt-0">
-      <div className="flex justify-center gap-0 overflow-hidden sm:gap-0">
+      <div className="flex justify-center gap-0 overflow-hidden">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -60,12 +70,48 @@ function Photos() {
         ))}
       </div>
 
-      <div className="flex justify-center gap-0 overflow-hidden sm:gap-0">
+      <div className="flex justify-center gap-0 overflow-hidden">
         {[image7, image8, image9, image10, image11].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-72 flex-none overflow-hidden'
+              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center gap-0 overflow-hidden">
+        {[image12, image13, image14, image15, image16].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center gap-0 overflow-hidden">
+        {[image17, image18, image19, image20, image21].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
             )}
           >
             <Image
