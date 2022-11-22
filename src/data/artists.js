@@ -19,7 +19,7 @@ import image19 from '@/images/clients/maddison-lopez-cotton-candy.jpeg'
 import image20 from '@/images/clients/the-empire.jpeg'
 import image21 from '@/images/clients/meredith-boyce.jpeg'
 import image22 from '@/images/clients/bayceiline-unaxious.PNG'
-import image23 from '@/images/clients/meredith-boyce.jpeg'
+import image23 from '@/images/clients/also-joe-two-straws.jpeg'
 import image24 from '@/images/clients/meredith-boyce.jpeg'
 import image25 from '@/images/clients/meredith-boyce.jpeg'
 import image26 from '@/images/clients/meredith-boyce.jpeg'
@@ -100,9 +100,9 @@ const artists = [
       song: 'Carwash Kiss'
     },
     {
-      artwork: '/images/clients/frisbee-club-carwash-kiss.jpeg',
-      artist: 'Frisbee Club',
-      song: 'Carwash Kiss'
+      artwork: image23,
+      artist: 'Also Joe',
+      song: 'Two Straws'
     },
     {
       artwork: '/images/clients/frisbee-club-carwash-kiss.jpeg',

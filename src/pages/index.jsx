@@ -67,13 +67,13 @@ function Photos() {
           <div
             key={artist.artwork}
             className={clsx(
-              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
+              'relative aspect-[10/10] w-100 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800'
             )}
           >
             <Image
               src={artist.artwork}
               alt={`${artist.artist} - ${artist.song}`}
-              sizes="(min-width: 140px) 18rem, 11rem"
+              sizes="(max-width: 140px) 12rem, 8rem"
               className="absolute inset-0 h-full w-full object-cover"
               layout='fill'
             />
