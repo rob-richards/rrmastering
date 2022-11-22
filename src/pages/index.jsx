@@ -62,74 +62,20 @@ function Hero() {
 function Photos() {
   return (
     <div className="mt-0">
-      {console.log('artists', artists)}
-      <div className="flex justify-center gap-0 overflow-hidden">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+      <div className="grid grid-cols-5 gap-0">
+        {artists.map(artist => (
           <div
-            key={image.src}
+            key={artist.artwork}
             className={clsx(
               'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
             )}
           >
             <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
+              src={artist.artwork}
+              alt={`${artist.artist} - ${artist.song}`}
+              sizes="(min-width: 140px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center gap-0 overflow-hidden">
-        {[image7, image8, image9, image10, image11].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center gap-0 overflow-hidden">
-        {[image12, image13, image14, image15, image16].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center gap-0 overflow-hidden">
-        {[image17, image18, image19, image20, image21].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[10/10] w-44 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800 sm:w-72'
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
+              layout='fill'
             />
           </div>
         ))}
