@@ -25,6 +25,16 @@ import image18 from '@/images/clients/untitled-live.jpeg'
 import image19 from '@/images/clients/maddison-lopez-cotton-candy.jpeg'
 import image20 from '@/images/clients/the-empire.jpeg'
 import image21 from '@/images/clients/meredith-boyce.jpeg'
+import image22 from '@/images/clients/bayceiline-unaxious.PNG'
+import image23 from '@/images/clients/meredith-boyce.jpeg'
+import image24 from '@/images/clients/meredith-boyce.jpeg'
+import image25 from '@/images/clients/meredith-boyce.jpeg'
+import image26 from '@/images/clients/meredith-boyce.jpeg'
+import image27 from '@/images/clients/meredith-boyce.jpeg'
+import image28 from '@/images/clients/meredith-boyce.jpeg'
+import image29 from '@/images/clients/meredith-boyce.jpeg'
+import image30 from '@/images/clients/meredith-boyce.jpeg'
+import artists from '@/data/artists'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 
@@ -52,6 +62,7 @@ function Hero() {
 function Photos() {
   return (
     <div className="mt-0">
+      {console.log('artists', artists)}
       <div className="flex justify-center gap-0 overflow-hidden">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
