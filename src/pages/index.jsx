@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import Form from '@/components/Form'
+import Contact from '@/components/Contact'
 import artists from '@/data/artists'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
@@ -65,7 +66,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I'm Rob, a mastering engineer from Nashville, TN. I make music sound amazing everywhere it's heard. Headphones, car, laptop, surround sound. I make sure it translates so the listener can connect with your music."
         />
       </Head>
       <Container className="flex mt-16 md:mt-32 mb-24 w-full">
@@ -73,7 +74,7 @@ export default function Home({ articles }) {
       </Container>
       <Photos />
       <Container className="mt-0">
-        <Form />
+        <Contact />
       </Container>
     </>
   )
