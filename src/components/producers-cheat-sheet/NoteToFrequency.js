@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { allNotes, octaveRanges } from '../../data/frequency/440.js';
 import { Listbox, Transition } from '@headlessui/react';
-import { CheckIcon, SelectorIcon } from '@heroicons/react/24/solid';
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
 import KeySelect from '@/components/producers-cheat-sheet/KeySelect';
 import ScaleSelect from '@/components/producers-cheat-sheet/ScaleSelect';
+import { allNotes, octaveRanges } from '../../data/frequency/440.js';
 
 export default function NoteToFrequency({
   updateKey,
@@ -210,7 +210,7 @@ export default function NoteToFrequency({
                 <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm border">
                   <span className="block truncate">{activeRange}</span>
                   <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                    <SelectorIcon
+                    <ChevronUpDownIcon
                       className="w-5 h-5 text-gray-400"
                       aria-hidden="true"
                     />
@@ -275,7 +275,7 @@ export default function NoteToFrequency({
                   className={`${
                     activeRange !== range
                       ? 'shadow-md'
-                      : 'bg-indigo-600 text-white shadow-inner'
+                      : 'text-sky-500 shadow-inner font-semibold'
                   } inline-block py-2 px-4 shadow-md focus:outline-none hover:shadow-inner`}
                   type="button"
                   value={range}

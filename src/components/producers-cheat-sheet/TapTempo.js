@@ -129,7 +129,7 @@ export default function TapTempo({
           <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto">
             <li className="inline-block">
               <input
-                className="w-24 py-2 px-4 rounded-tl-lg rounded-bl-lg outline-none shadow-md text-center text-lg"
+                className="w-24 py-2 px-4 rounded-tl-lg rounded-bl-lg outline-none text-center text-lg"
                 maxLength={3}
                 onChange={(e) =>
                   updateTypedBPM(parseInt(e.target.value, 10) || 0)
@@ -143,7 +143,7 @@ export default function TapTempo({
             </li>
             <li className="inline-block border-l align-top">
               <button
-                className="py-3 px-4 rounded-tr-lg rounded-br-lg outline-none focus:outline-none shadow-md hover:shadow-inner"
+                className="py-3 px-4 rounded-tr-lg rounded-br-lg outline-none focus:outline-none hover:shadow-inner"
                 type="button"
                 onClick={() => handleTempoSubmit()}
                 // disabled={deafultBPM === typedBPM}
@@ -168,7 +168,7 @@ export default function TapTempo({
               className={`${
                 defaultDuration !== 0.5
                   ? 'shadow-md'
-                  : 'bg-indigo-600 text-white shadow-inner font-semibold'
+                  : 'text-sky-500 shadow-inner font-semibold'
               } inline-block py-2 px-4 shadow-md focus:outline-none hover:shadow-inner`}
               type="button"
               onClick={() => getFractionalBPM(0.5)}
@@ -181,7 +181,7 @@ export default function TapTempo({
               className={`${
                 defaultDuration !== 0.25
                   ? 'shadow-md'
-                  : 'bg-indigo-600 text-white shadow-inner font-semibold'
+                  : 'text-sky-500 shadow-inner font-semibold'
               } inline-block py-2 px-4 shadow-md focus:outline-none hover:shadow-inner`}
               type="button"
               onClick={() => getFractionalBPM(0.25)}
@@ -194,7 +194,7 @@ export default function TapTempo({
               className={`${
                 defaultDuration !== 0.125
                   ? 'shadow-md'
-                  : 'bg-indigo-600 text-white shadow-inner font-semibold'
+                  : 'text-sky-500 shadow-inner font-semibold'
               } inline-block rounded-tr-lg rounded-br-lg py-2 px-4 shadow-md focus:outline-none hover:shadow-inner `}
               type="button"
               onClick={() => getFractionalBPM(0.125)}

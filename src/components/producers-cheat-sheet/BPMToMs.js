@@ -56,12 +56,12 @@ export default function BPMToMs({ bpm }) {
         This displays the length of the note in the selected BPM
       </div>
       <div className="mt-5 mb-10">
-        <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto">
+        <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto shadow-md">
           <li className="inline-block">
             <button
-              className={`inline-block rounded-tl-lg rounded-bl-lg py-2 px-4 focus:outline-none shadow-md hover:shadow-inner ${
+              className={`inline-block rounded-tl-lg rounded-bl-lg py-2 px-4 focus:outline-none hover:shadow-inner ${
                 durationValue === 'note'
-                  ? 'bg-indigo-600 text-white shadow-inner font-semibold'
+                  ? 'text-sky-500 shadow-inner font-semibold'
                   : ''
               }`}
               onClick={getDurationValue}
@@ -73,9 +73,9 @@ export default function BPMToMs({ bpm }) {
           </li>
           <li className="inline-block border-l border-r">
             <button
-              className={`inline-block py-2 px-4 shadow-md focus:outline-none hover:shadow-inner ${
+              className={`inline-block py-2 px-4 focus:outline-none hover:shadow-inner ${
                 durationValue === 'triplet'
-                  ? 'bg-indigo-600 text-white shadow-inner font-semibold'
+                  ? 'text-sky-500 shadow-inner font-semibold'
                   : ''
               }`}
               onClick={getDurationValue}
@@ -89,7 +89,7 @@ export default function BPMToMs({ bpm }) {
             <button
               className={`inline-block rounded-tr-lg rounded-br-lg py-2 px-4 shadow-md focus:outline-none hover:shadow-inner ${
                 durationValue === 'dotted'
-                  ? 'bg-indigo-600 text-white shadow-inner font-semibold'
+                  ? 'text-sky-500 shadow-inner font-semibold'
                   : ''
               }`}
               onClick={getDurationValue}

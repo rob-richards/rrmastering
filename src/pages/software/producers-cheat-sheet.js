@@ -133,21 +133,10 @@ export default function CheatSheet() {
   );
 
   return (
-    <div className="container mx-auto mb-10 pb-10 px-0">
-      <div className="bg-white rounded-tr-lg rounded-tl-lg text-gray-600">
-        <ul className="hidden lg:mt-6 lg:flex items-center space-x-2 p-6">
-          <li>
-            <HomeIcon className="h-5 w-5" />
-          </li>
-          <li>{renderBreadcrumbArrow}</li>
-          <li>Software</li>
-          <li>{renderBreadcrumbArrow}</li>
-          <li>Producers Cheat Sheet</li>
-        </ul>
-      </div>
-      <div className="bg-white rounded-br-lg rounded-bl-lg h-auto text-gray-900 p-5 pt-0">
+    <div className="container mx-auto my-10 pb-10 px-0">
+      <div className="bg-white rounded-br-lg rounded-bl-lg h-auto text-gray-900 p-0 pt-10">
         <div className="grid grid-flow-row grid-cols-5 grid-rows-1 gap-4 relative">
-          <section className="sm:mb-6 col-span-5 sm:col-span-1 p-5">
+          <section className="sm:mb-6 col-span-5 sm:col-span-1 p-5 pl-0">
             <div className="sticky top-6">
               <ul className="w-1/2 sm:w-full list-inside sm:mb-8 inline-block">
                 <li className="font-bold">Time</li>

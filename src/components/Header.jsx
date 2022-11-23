@@ -183,7 +183,7 @@ export function Header() {
       >
         <div
           ref={headerRef}
-          className="top-0 z-10 h-16 pt-10"
+          className="top-0 z-10 h-24 pt-10"
           style={{ position: 'var(--header-position)' }}
         >
           <Container
