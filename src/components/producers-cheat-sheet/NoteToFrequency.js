@@ -196,9 +196,29 @@ export default function NoteToFrequency({
       <div className="sm:px-20 text-center italic font-sans text-gray-500 mt-2 mb-12">
         This displays the frequency value of notes and scale intervals
       </div>
-      <div className="w-full mt-5 mb-10 grid grid-cols-5">
-        <div className="col-span-5 sm:col-span-3 mb-3 sm:mb-0">
-          <div className="text-sm text-gray-600 mb-1 hidden md:inline-block">
+      <div className="w-full mt-5 mb-10 grid grid-cols-6">
+        <div className="inline-block m-auto col-start-3 w-full mb-3 sm:mb-0">
+          <KeySelect
+            className="inline-block"
+            updateKey={updateKey}
+            filteredScale={filteredScale}
+            selectedScale={selectedScale}
+            updateScale={updateScale}
+          />
+        </div>
+        <div className="inline-block m-auto col-start-4 w-full mb-3 sm:mb-0">
+          <ScaleSelect
+            className="inline-block"
+            selectedScale={selectedScale}
+            updateScale={updateScale}
+            filteredScale={filteredScale}
+            selectedKey={selectedKey}
+          />
+        </div>
+      </div>
+      <div className="w-full mt-5 mb-10">
+        <div className="col-span-5 col-start-1 sm:col-span-3 mb-3 sm:mb-0 m-auto w-max m-auto">
+          <div className="text-sm text-gray-600 mb-1 inline-block w-full m-auto text-center">
             Select octave range to display
           </div>
           <div className="w-full sm:w-40 inline-block md:hidden">
@@ -265,7 +285,7 @@ export default function NoteToFrequency({
               </div>
             </Listbox>
           </div>
-          <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto  hidden md:inline-block">
+          <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto">
             {octaveRanges.map((range) => (
               <li
                 className="inline-block border-l last:rounded-br-lg last:rounded-tr-lg first:rounded-bl-lg first:rounded-tl-lg overflow-hidden align-bottom"
@@ -286,24 +306,6 @@ export default function NoteToFrequency({
               </li>
             ))}
           </ul>
-        </div>
-        <div className="inline-block m-auto col-span-5 sm:col-auto w-full mb-3 sm:mb-0">
-          <KeySelect
-            className="inline-block"
-            updateKey={updateKey}
-            filteredScale={filteredScale}
-            selectedScale={selectedScale}
-            updateScale={updateScale}
-          />
-        </div>
-        <div className="inline-block m-auto col-span-5 sm:col-auto w-full mb-3 sm:mb-0">
-          <ScaleSelect
-            className="inline-block"
-            selectedScale={selectedScale}
-            updateScale={updateScale}
-            filteredScale={filteredScale}
-            selectedKey={selectedKey}
-          />
         </div>
       </div>
       <div className="flex flex-col">

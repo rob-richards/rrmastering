@@ -87,7 +87,7 @@ export default function BPMToMs({ bpm }) {
           </li>
           <li className="inline-block">
             <button
-              className={`inline-block rounded-tr-lg rounded-br-lg py-2 px-4 shadow-md focus:outline-none hover:shadow-inner ${
+              className={`inline-block rounded-tr-lg rounded-br-lg py-2 px-4 focus:outline-none hover:shadow-inner ${
                 durationValue === 'dotted'
                   ? 'text-sky-500 shadow-inner font-semibold'
                   : ''
