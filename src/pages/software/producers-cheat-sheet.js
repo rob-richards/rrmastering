@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react';
-import TapTempo from '@/components/producers-cheat-sheet/TapTempo';
-import NoteToFrequency from '@/components/producers-cheat-sheet/NoteToFrequency';
-import { HomeIcon } from '@heroicons/react/solid';
+import { HomeIcon } from '@heroicons/react/24/solid';
 import { Link as RsLink } from 'react-scroll';
 import BPMToMs from '@/components/producers-cheat-sheet/BPMToMs';
+import TapTempo from '@/components/producers-cheat-sheet/TapTempo';
+import NoteToFrequency from '@/components/producers-cheat-sheet/NoteToFrequency';
 
 const ACTIONS = {
   BPM: 'bpm',

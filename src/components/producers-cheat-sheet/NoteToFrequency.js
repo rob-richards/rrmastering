@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { allNotes, octaveRanges } from '../../data/frequency/440.js';
 import { Listbox, Transition } from '@headlessui/react';
-import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
+import { CheckIcon, SelectorIcon } from '@heroicons/react/24/solid';
 import KeySelect from '@/components/producers-cheat-sheet/KeySelect';
 import ScaleSelect from '@/components/producers-cheat-sheet/ScaleSelect';
 
