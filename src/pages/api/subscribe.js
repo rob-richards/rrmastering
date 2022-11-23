@@ -11,18 +11,11 @@ mailchimp.setConfig({
 
 export default async (req, res) => {
   const {
-    alts,
     comments,
     email,
-    highresemail,
     honey,
-    mastering,
-    mixing,
     name,
-    phone,
-    projectName,
-    tracks,
-    updatesemail,
+    artist,
   } = req.body;
 
   if (honey) {
@@ -41,9 +34,6 @@ export default async (req, res) => {
     let md5Email;
     const interestsList = ['Inquiry'];
 
-    if (mastering) interestsList.push('Mastering');
-    if (mixing) interestsList.push('Mixing');
-
     if (updatesemail) {
       md5Email = md5(updatesemail.toLowerCase());
       data = {
@@ -56,7 +46,7 @@ export default async (req, res) => {
         status: 'subscribed',
       };
     } else {
-      if (!projectName || !email || !name) {
+      if (!email || !name) {
         return res.status(400).json({ error: 'A required field is missing' });
       }
 
@@ -65,12 +55,9 @@ export default async (req, res) => {
         email_address: email,
         status_if_new: 'subscribed',
         merge_fields: {
-          ALTS: alts,
           COMMENTS: comments,
           NAME: name,
-          ARTIST: projectName,
-          TRACKS: tracks,
-          PHONE: phone,
+          ARTIST: artist,
         },
         interests: {
           b77d0f3dea: true,
@@ -91,7 +78,7 @@ export default async (req, res) => {
     if (response.status >= 400) {
       return res.status(400).json({
         error:
-          'Sorry! There was an error receiving your info. Please email rob@wavedivision.co and we will reach out as soon as possible!',
+          'Sorry! There was an error receiving your info. Please email rob@robrichardsmastering.com and we will reach out as soon as possible!',
       });
     }
 

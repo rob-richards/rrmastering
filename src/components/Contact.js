@@ -18,8 +18,6 @@ export default function Contact() {
   // Hold a message in state to handle the response from the API.
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [checkedMixing, setCheckedMixing] = useState(false);
-  const [checkedMastering, setCheckedMastering] = useState(false);
 
   const [hasValidEmail, setValidEmail] = useState(false);
 
@@ -31,16 +29,11 @@ export default function Contact() {
 
     const res = await fetch('/api/subscribe', {
       body: JSON.stringify({
-        alts: data.alts,
         comments: data.comments,
         email: data.email,
         honey: data.honey,
-        mastering: data.mastering,
-        mixing: data.mixing,
         name: data.name,
-        phone: data.phone,
-        projectName: data.projectName,
-        tracks: data.tracks,
+        artist: data.artist,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -57,10 +50,8 @@ export default function Contact() {
     }
 
     formRef.current.reset();
-    setCheckedMixing(false);
-    setCheckedMastering(false);
     setSuccessMessage(
-      'Thanks so much and we will be in touch soon! Be sure to add rob@wavedivision.co to your contact list so our email does not go to your spam folder!'
+      'Thanks so much and we will be in touch soon! Be sure to add rob@robrichardsmastering.com to your contact list so our email does not go to your spam folder!'
     );
   };
 
@@ -184,12 +175,12 @@ export default function Contact() {
                   <span className="block text-sm font-medium text-zinc-700">Artist name</span>
                   <input
                     className="border block w-full rounded-md border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500"
-                    id="phone-input"
-                    name="phone"
+                    id="artist-input"
+                    name="artist"
                     onChange={() => {}}
                     onFocus={disableAutoComplete}
-                    type="phone"
-                    {...register('phone')}
+                    type="text"
+                    {...register('artist')}
                   />
                 </label>
               </div>

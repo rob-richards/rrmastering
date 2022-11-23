@@ -1,10 +1,9 @@
 import React, { useReducer } from 'react';
-import UpdatesForm from '@components/updatesForm';
-import TapTempo from '@components/producers-cheat-sheet/TapTempo';
-import NoteToFrequency from '@components/producers-cheat-sheet/NoteToFrequency';
+import TapTempo from '@/components/producers-cheat-sheet/TapTempo';
+import NoteToFrequency from '@/components/producers-cheat-sheet/NoteToFrequency';
 import { HomeIcon } from '@heroicons/react/solid';
 import { Link as RsLink } from 'react-scroll';
-import BPMToMs from '@components/producers-cheat-sheet/BPMToMs';
+import BPMToMs from '@/components/producers-cheat-sheet/BPMToMs';
 
 const ACTIONS = {
   BPM: 'bpm',
@@ -178,7 +177,6 @@ export default function CheatSheet() {
             <h2 className="text-5xl px-4 sm:px-6 font-bold w-full text-left">
               Producers Cheat Sheet
             </h2>
-            <UpdatesForm />
             <TapTempo
               deafultBPM={bpm || initialState.bpm}
               defaultDuration={state.duration}
@@ -193,7 +191,6 @@ export default function CheatSheet() {
               updateOctaveRange={updateOctaveRange}
               updateScale={updateScale}
             />
-            <UpdatesForm />
             {/* <EQPresets defaultKey={key || initialState.key} /> */}
           </section>
         </div>

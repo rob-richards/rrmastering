@@ -1,0 +1,433 @@
+[{
+    "Note": "C0",
+    "Frequency": "16.20",
+    "Wavelength": "2129.24"
+}, {
+    "Note": "C#0/Db0",
+    "Frequency": "17.17",
+    "Wavelength": "2009.74"
+}, {
+    "Note": "D0",
+    "Frequency": "18.19",
+    "Wavelength": "1896.94"
+}, {
+    "Note": "D#0/Eb0",
+    "Frequency": "19.27",
+    "Wavelength": "1790.47"
+}, {
+    "Note": "E0",
+    "Frequency": "20.41",
+    "Wavelength": "1689.98"
+}, {
+    "Note": "F0",
+    "Frequency": "21.63",
+    "Wavelength": "1595.13"
+}, {
+    "Note": "F#0/Gb0",
+    "Frequency": "22.91",
+    "Wavelength": "1505.60"
+}, {
+    "Note": "G0",
+    "Frequency": "24.28",
+    "Wavelength": "1421.10"
+}, {
+    "Note": "G#0/Ab0",
+    "Frequency": "25.72",
+    "Wavelength": "1341.34"
+}, {
+    "Note": "A0",
+    "Frequency": "27.25",
+    "Wavelength": "1266.06"
+}, {
+    "Note": "A#0/Bb0",
+    "Frequency": "28.87",
+    "Wavelength": "1195.00"
+}, {
+    "Note": "B0",
+    "Frequency": "30.59",
+    "Wavelength": "1127.93"
+}, {
+    "Note": "C1",
+    "Frequency": "32.41",
+    "Wavelength": "1064.62"
+}, {
+    "Note": "C#1/Db1",
+    "Frequency": "34.33",
+    "Wavelength": "1004.87"
+}, {
+    "Note": "D1",
+    "Frequency": "36.37",
+    "Wavelength": "948.47"
+}, {
+    "Note": "D#1/Eb1",
+    "Frequency": "38.54",
+    "Wavelength": "895.24"
+}, {
+    "Note": "E1",
+    "Frequency": "40.83",
+    "Wavelength": "844.99"
+}, {
+    "Note": "F1",
+    "Frequency": "43.26",
+    "Wavelength": "797.56"
+}, {
+    "Note": "F#1/Gb1",
+    "Frequency": "45.83",
+    "Wavelength": "752.80"
+}, {
+    "Note": "G1",
+    "Frequency": "48.55",
+    "Wavelength": "710.55"
+}, {
+    "Note": "G#1/Ab1",
+    "Frequency": "51.44",
+    "Wavelength": "670.67"
+}, {
+    "Note": "A1",
+    "Frequency": "54.50",
+    "Wavelength": "633.03"
+}, {
+    "Note": "A#1/Bb1",
+    "Frequency": "57.74",
+    "Wavelength": "597.50"
+}, {
+    "Note": "B1",
+    "Frequency": "61.17",
+    "Wavelength": "563.96"
+}, {
+    "Note": "C2",
+    "Frequency": "64.81",
+    "Wavelength": "532.31"
+}, {
+    "Note": "C#2/Db2",
+    "Frequency": "68.67",
+    "Wavelength": "502.43"
+}, {
+    "Note": "D2",
+    "Frequency": "72.75",
+    "Wavelength": "474.23"
+}, {
+    "Note": "D#2/Eb2",
+    "Frequency": "77.07",
+    "Wavelength": "447.62"
+}, {
+    "Note": "E2",
+    "Frequency": "81.66",
+    "Wavelength": "422.50"
+}, {
+    "Note": "F2",
+    "Frequency": "86.51",
+    "Wavelength": "398.78"
+}, {
+    "Note": "F#2/Gb2",
+    "Frequency": "91.66",
+    "Wavelength": "376.40"
+}, {
+    "Note": "G2",
+    "Frequency": "97.11",
+    "Wavelength": "355.27"
+}, {
+    "Note": "G#2/Ab2",
+    "Frequency": "102.88",
+    "Wavelength": "335.33"
+}, {
+    "Note": "A2",
+    "Frequency": "109.00",
+    "Wavelength": "316.51"
+}, {
+    "Note": "A#2/Bb2",
+    "Frequency": "115.48",
+    "Wavelength": "298.75"
+}, {
+    "Note": "B2",
+    "Frequency": "122.35",
+    "Wavelength": "281.98"
+}, {
+    "Note": "C3",
+    "Frequency": "129.62",
+    "Wavelength": "266.16"
+}, {
+    "Note": "C#3/Db3",
+    "Frequency": "137.33",
+    "Wavelength": "251.22"
+}, {
+    "Note": "D3",
+    "Frequency": "145.50",
+    "Wavelength": "237.12"
+}, {
+    "Note": "D#3/Eb3",
+    "Frequency": "154.15",
+    "Wavelength": "223.81"
+}, {
+    "Note": "E3",
+    "Frequency": "163.32",
+    "Wavelength": "211.25"
+}, {
+    "Note": "F3",
+    "Frequency": "173.03",
+    "Wavelength": "199.39"
+}, {
+    "Note": "F#3/Gb3",
+    "Frequency": "183.32",
+    "Wavelength": "188.20"
+}, {
+    "Note": "G3",
+    "Frequency": "194.22",
+    "Wavelength": "177.64"
+}, {
+    "Note": "G#3/Ab3",
+    "Frequency": "205.76",
+    "Wavelength": "167.67"
+}, {
+    "Note": "A3",
+    "Frequency": "218.00",
+    "Wavelength": "158.26"
+}, {
+    "Note": "A#3/Bb3",
+    "Frequency": "230.96",
+    "Wavelength": "149.37"
+}, {
+    "Note": "B3",
+    "Frequency": "244.70",
+    "Wavelength": "140.99"
+}, {
+    "Note": "C4",
+    "Frequency": "259.25",
+    "Wavelength": "133.08"
+}, {
+    "Note": "C#4/Db4",
+    "Frequency": "274.66",
+    "Wavelength": "125.61"
+}, {
+    "Note": "D4",
+    "Frequency": "290.99",
+    "Wavelength": "118.56"
+}, {
+    "Note": "D#4/Eb4",
+    "Frequency": "308.30",
+    "Wavelength": "111.90"
+}, {
+    "Note": "E4",
+    "Frequency": "326.63",
+    "Wavelength": "105.62"
+}, {
+    "Note": "F4",
+    "Frequency": "346.05",
+    "Wavelength": "99.70"
+}, {
+    "Note": "F#4/Gb4",
+    "Frequency": "366.63",
+    "Wavelength": "94.10"
+}, {
+    "Note": "G4",
+    "Frequency": "388.43",
+    "Wavelength": "88.82"
+}, {
+    "Note": "G#4/Ab4",
+    "Frequency": "411.53",
+    "Wavelength": "83.83"
+}, {
+    "Note": "A4",
+    "Frequency": "436.00",
+    "Wavelength": "79.13"
+}, {
+    "Note": "A#4/Bb4",
+    "Frequency": "461.93",
+    "Wavelength": "74.69"
+}, {
+    "Note": "B4",
+    "Frequency": "489.39",
+    "Wavelength": "70.50"
+}, {
+    "Note": "C5",
+    "Frequency": "518.49",
+    "Wavelength": "66.54"
+}, {
+    "Note": "C#5/Db5",
+    "Frequency": "549.33",
+    "Wavelength": "62.80"
+}, {
+    "Note": "D5",
+    "Frequency": "581.99",
+    "Wavelength": "59.28"
+}, {
+    "Note": "D#5/Eb5",
+    "Frequency": "616.60",
+    "Wavelength": "55.95"
+}, {
+    "Note": "E5",
+    "Frequency": "653.26",
+    "Wavelength": "52.81"
+}, {
+    "Note": "F5",
+    "Frequency": "692.11",
+    "Wavelength": "49.85"
+}, {
+    "Note": "F#5/Gb5",
+    "Frequency": "733.26",
+    "Wavelength": "47.05"
+}, {
+    "Note": "G5",
+    "Frequency": "776.86",
+    "Wavelength": "44.41"
+}, {
+    "Note": "G#5/Ab5",
+    "Frequency": "823.06",
+    "Wavelength": "41.92"
+}, {
+    "Note": "A5",
+    "Frequency": "872.00",
+    "Wavelength": "39.56"
+}, {
+    "Note": "A#5/Bb5",
+    "Frequency": "923.85",
+    "Wavelength": "37.34"
+}, {
+    "Note": "B5",
+    "Frequency": "978.79",
+    "Wavelength": "35.25"
+}, {
+    "Note": "C6",
+    "Frequency": "1036.99",
+    "Wavelength": "33.27"
+}, {
+    "Note": "C#6/Db6",
+    "Frequency": "1098.65",
+    "Wavelength": "31.40"
+}, {
+    "Note": "D6",
+    "Frequency": "1163.98",
+    "Wavelength": "29.64"
+}, {
+    "Note": "D#6/Eb6",
+    "Frequency": "1233.19",
+    "Wavelength": "27.98"
+}, {
+    "Note": "E6",
+    "Frequency": "1306.52",
+    "Wavelength": "26.41"
+}, {
+    "Note": "F6",
+    "Frequency": "1384.21",
+    "Wavelength": "24.92"
+}, {
+    "Note": "F#6/Gb6",
+    "Frequency": "1466.52",
+    "Wavelength": "23.53"
+}, {
+    "Note": "G6",
+    "Frequency": "1553.73",
+    "Wavelength": "22.20"
+}, {
+    "Note": "G#6/Ab6",
+    "Frequency": "1646.12",
+    "Wavelength": "20.96"
+}, {
+    "Note": "A6",
+    "Frequency": "1744.00",
+    "Wavelength": "19.78"
+}, {
+    "Note": "A#6/Bb6",
+    "Frequency": "1847.70",
+    "Wavelength": "18.67"
+}, {
+    "Note": "B6",
+    "Frequency": "1957.57",
+    "Wavelength": "17.62"
+}, {
+    "Note": "C7",
+    "Frequency": "2073.98",
+    "Wavelength": "16.63"
+}, {
+    "Note": "C#7/Db7",
+    "Frequency": "2197.30",
+    "Wavelength": "15.70"
+}, {
+    "Note": "D7",
+    "Frequency": "2327.96",
+    "Wavelength": "14.82"
+}, {
+    "Note": "D#7/Eb7",
+    "Frequency": "2466.39",
+    "Wavelength": "13.99"
+}, {
+    "Note": "E7",
+    "Frequency": "2613.05",
+    "Wavelength": "13.20"
+}, {
+    "Note": "F7",
+    "Frequency": "2768.43",
+    "Wavelength": "12.46"
+}, {
+    "Note": "F#7/Gb7",
+    "Frequency": "2933.05",
+    "Wavelength": "11.76"
+}, {
+    "Note": "G7",
+    "Frequency": "3107.45",
+    "Wavelength": "11.10"
+}, {
+    "Note": "G#7/Ab7",
+    "Frequency": "3292.23",
+    "Wavelength": "10.48"
+}, {
+    "Note": "A7",
+    "Frequency": "3488.00",
+    "Wavelength": "9.89"
+}, {
+    "Note": "A#7/Bb7",
+    "Frequency": "3695.41",
+    "Wavelength": "9.34"
+}, {
+    "Note": "B7",
+    "Frequency": "3915.15",
+    "Wavelength": "8.81"
+}, {
+    "Note": "C8",
+    "Frequency": "4147.95",
+    "Wavelength": "8.32"
+}, {
+    "Note": "C#8/Db8",
+    "Frequency": "4394.60",
+    "Wavelength": "7.85"
+}, {
+    "Note": "D8",
+    "Frequency": "4655.92",
+    "Wavelength": "7.41"
+}, {
+    "Note": "D#8/Eb8",
+    "Frequency": "4932.78",
+    "Wavelength": "6.99"
+}, {
+    "Note": "E8",
+    "Frequency": "5226.09",
+    "Wavelength": "6.60"
+}, {
+    "Note": "F8",
+    "Frequency": "5536.85",
+    "Wavelength": "6.23"
+}, {
+    "Note": "F#8/Gb8",
+    "Frequency": "5866.09",
+    "Wavelength": "5.88"
+}, {
+    "Note": "G8",
+    "Frequency": "6214.91",
+    "Wavelength": "5.55"
+}, {
+    "Note": "G#8/Ab8",
+    "Frequency": "6584.47",
+    "Wavelength": "5.24"
+}, {
+    "Note": "A8",
+    "Frequency": "6976.00",
+    "Wavelength": "4.95"
+}, {
+    "Note": "A#8/Bb8",
+    "Frequency": "7390.81",
+    "Wavelength": "4.67"
+}, {
+    "Note": "B8",
+    "Frequency": "7830.30",
+    "Wavelength": "4.41"
+}]
