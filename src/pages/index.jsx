@@ -1,14 +1,15 @@
-import Image from 'next/legacy/image'
-import Head from 'next/head'
-import clsx from 'clsx'
+import Image from 'next/legacy/image';
+import Head from 'next/head';
+import clsx from 'clsx';
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import Form from '@/components/Form'
-import Contact from '@/components/Contact'
-import artists from '@/data/artists'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import Form from '@/components/Form';
+import Contact from '@/components/Contact';
+import artists from '@/data/artists';
+import { generateRssFeed } from '@/lib/generateRssFeed';
+import { getAllArticles } from '@/lib/getAllArticles';
+import { Link as RsLink } from 'react-scroll';
 
 function Hero() {
   return (
@@ -23,7 +24,18 @@ function Hero() {
       <div className="grid md:grid-cols-5 grid-cols-3 gap-4 mt-12 justify-items-center">
         <div className="col-start-2 md:col-start-3">
           <Button type="submit" className="ml-0 flex-none bg-sky-500 hover:bg-sky-600">
-            Book a Session
+            <RsLink
+              activeClass="active"
+              className={''}
+              to={'contact'}
+              spy
+              smooth
+              offset={0}
+              duration={500}
+              saveHashHistory={false}
+            >
+              Book a Session
+            </RsLink>
           </Button>
         </div>
       </div>
@@ -33,7 +45,7 @@ function Hero() {
 
 function Photos() {
   return (
-    <div className="mt-0">
+    <div className="mt-0 mb-16">
       <div className="grid grid-cols-5 gap-0">
         {artists.map(artist => (
           <div

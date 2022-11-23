@@ -111,6 +111,11 @@ const artists = [
       song: 'Too Good'
     },
     {
+      artwork: meredithChangeYourMind,
+      artist: 'Meredith Boyce',
+      song: 'Change Your Mind'
+    },
+    {
       artwork: darienLaidbackEp,
       artist: 'Darien Noel',
       song: 'Question & Answers EP'
@@ -126,11 +131,6 @@ const artists = [
       song: 'Carwash Kiss'
     },
     {
-      artwork: untitledLive,
-      artist: 'Untitled Worship',
-      song: '08122022 - Live'
-    },
-    {
       artwork: bayUnanxious,
       artist: 'Bayceline',
       song: 'Unanxious'
@@ -141,19 +141,24 @@ const artists = [
       song: 'Cotton Candy'
     },
     {
+      artwork: untitledLive,
+      artist: 'Untitled Worship',
+      song: '08122022 - Live'
+    },
+    {
       artwork: empireIstillRemember,
       artist: 'The Empire',
       song: 'I Still Remember'
     },
     {
-      artwork: meredithChangeYourMind,
-      artist: 'Meredith Boyce',
-      song: 'Change Your Mind'
-    },
-    {
       artwork: jonTellMe,
       artist: 'Jon Murray',
       song: 'Tell Me'
+    },
+    {
+      artwork: meredithLovebug,
+      artist: 'Meredith Boyce',
+      song: 'Lovebug'
     },
     {
       artwork: untitledJustToBeClose,
@@ -164,11 +169,6 @@ const artists = [
       artwork: maddisonHYAMLC,
       artist: 'Maddison Lopez',
       song: 'HYAMLC'
-    },
-    {
-      artwork: meredithLovebug,
-      artist: 'Meredith Boyce',
-      song: 'Lovebug'
     },
     {
       artwork: untitledFullyPersuaded,

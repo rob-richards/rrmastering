@@ -18,6 +18,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
       <Link
         href={href}
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-sky-500 dark:text-zinc-200 dark:hover:text-sky-500"
+        target="_blank"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-sky-500" />
         <span className="ml-4">{children}</span>
@@ -61,10 +62,10 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink href="https://twitter.com/robwrichards" target="_blank" icon={TwitterIcon}>
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+              <SocialLink href="https://www.instagram.com/robrichardsmastering/" icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
               </SocialLink>
               <SocialLink
