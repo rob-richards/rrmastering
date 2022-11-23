@@ -196,8 +196,8 @@ export default function NoteToFrequency({
       <div className="sm:px-20 text-center italic font-sans text-gray-500 mt-2 mb-12">
         This displays the frequency value of notes and scale intervals
       </div>
-      <div className="w-full mt-5 mb-10 grid grid-cols-6">
-        <div className="inline-block m-auto col-start-3 w-full mb-3 sm:mb-0">
+      <div className="w-full mt-5 mb-10 grid grid-cols-12">
+        <div className="inline-block m-auto col-start-3 col-span-3 w-full mb-3 sm:mb-0">
           <KeySelect
             className="inline-block"
             updateKey={updateKey}
@@ -206,7 +206,7 @@ export default function NoteToFrequency({
             updateScale={updateScale}
           />
         </div>
-        <div className="inline-block m-auto col-start-4 w-full mb-3 sm:mb-0">
+        <div className="inline-block m-auto col-start-8 col-span-3 w-full mb-3 sm:mb-0">
           <ScaleSelect
             className="inline-block"
             selectedScale={selectedScale}

@@ -38,7 +38,7 @@ export default function ScaleSelect({
   };
 
   return (
-    <div className="w-full sm:w-40">
+    <div className="w-full sm:w-auto">
       <div className="text-sm text-gray-600 mb-1">Select Scale:</div>
       <Listbox
         disabled={isDisabled}

@@ -163,7 +163,7 @@ export default function CheatSheet() {
             </div>
           </section>
           <section className="col-span-5 sm:col-span-4 pb-5 shadow-lg rounded-l px-5">
-            <h2 className="text-5xl px-4 sm:px-6 font-bold w-full text-left">
+            <h2 className="text-4xl px-4 sm:px-6 font-bold w-full text-left">
               Producers Cheat Sheet
             </h2>
             <TapTempo

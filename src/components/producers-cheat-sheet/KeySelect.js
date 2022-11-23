@@ -41,7 +41,7 @@ export default function KeySelect({
   };
 
   return (
-    <div className="w-full sm:w-40">
+    <div className="w-full sm:w-auto">
       <div className="text-sm text-gray-600 mb-1">Select Key:</div>
       <Listbox value={selected} onChange={onChangeKey}>
         <div className="relative mt-1">

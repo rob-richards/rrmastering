@@ -110,37 +110,37 @@ export default function BPMToMs({ bpm }) {
                   <tr>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
                       Whole
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
                       Half
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
                       Quarter
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
                       Eighth
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
                       Sixteenth
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
                       Thirtysecond
                     </th>
@@ -149,37 +149,37 @@ export default function BPMToMs({ bpm }) {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {noteData.map((note) => (
                     <tr key={note[durationValue].whole}>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-5 py-4 whitespace-nowrap">
                         <div className="text-md text-gray-900">
                           {note[durationValue].whole}
                           ms
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-5 py-4 whitespace-nowrap">
                         <div className="text-md text-gray-900">
                           {note[durationValue].half}
                           ms
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-5 py-4 whitespace-nowrap">
                         <div className="text-md text-gray-900">
                           {note[durationValue].quarter}
                           ms
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-5 py-4 whitespace-nowrap">
                         <div className="text-md text-gray-900">
                           {note[durationValue].eighth}
                           ms
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-5 py-4 whitespace-nowrap">
                         <div className="text-md text-gray-900">
                           {note[durationValue].sixteenth}
                           ms
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-5 py-4 whitespace-nowrap">
                         <div className="text-md text-gray-900">
                           {note[durationValue].thirtysecond}
                           ms
