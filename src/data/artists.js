@@ -1,33 +1,33 @@
-import ellrose from '@/images/clients/ellrose.jpeg'
-import darienWeddingRings from '@/images/clients/darien-noel-wedding-rings.jpeg'
-import cloudlyTooGood from '@/images/clients/cloudly-too-good.jpeg'
-import cbWorship from '@/images/clients/cb-worship.jpeg'
-import zachEmptyCups from '@/images/clients/zach-sines-empty-cups.jpeg'
-import mxFlavor from '@/images/clients/minus-expenses-flavor-of-the-week.jpeg'
-import meredithLessonLearned from '@/images/clients/meredith-boyce-lesson-learned.jpeg'
-import darienLaidbackEp from '@/images/clients/darien-noel-ep.jpeg'
-import zachAlone from '@/images/clients/zach-sines-alone.jpeg'
-import zachEmptyCupsAcoustic from '@/images/clients/zach-sines-empty-cups-acoustic.jpeg'
-import darienLaidbackFisherman from '@/images/clients/darien-noel-laidback-fisherman.jpeg'
-import untitledShouldntHave from '@/images/clients/untitled-worship-shouldnt-have.jpeg'
-import frisbeeCarwashKiss from '@/images/clients/frisbee-club-carwash-kiss.jpeg'
-import jonThisIsWar from '@/images/clients/jonathan-murray.jpeg'
-import jonTellMe from '@/images/clients/jon-murray-tell-me.jpeg'
-import yugoTragic from '@/images/clients/yugo-tragic.jpeg'
-import lanceNoIsland from '@/images/clients/lance.jpeg'
-import untitledLive from '@/images/clients/untitled-live.jpeg'
-import maddisonCottonCandy from '@/images/clients/maddison-lopez-cotton-candy.jpeg'
-import empireIstillRemember from '@/images/clients/the-empire.jpeg'
-import meredithChangeYourMind from '@/images/clients/meredith-boyce-change-your-mind.jpeg'
-import bayUnanxious from '@/images/clients/bayceiline-unaxious.PNG'
-import alsoJoeTwoStraws from '@/images/clients/also-joe-two-straws.jpeg'
-import maddisonHYAMLC from '@/images/clients/maddison-hyamlc.PNG'
-import maddisonNatural from '@/images/clients/maddison-natural.PNG'
-import meredithLovebug from '@/images/clients/meredith-boyce-lovebug.PNG'
-import untitledFullyPersuaded from '@/images/clients/untitled-fully-persuaded.PNG'
-import untitledJustToBeClose from '@/images/clients/untitled-just-to-be-close.PNG'
-import untitledLifeline from '@/images/clients/untitled-lifeline.PNG'
-import frisbeeAnymore from '@/images/clients/frisbee-anymore.PNG'
+import ellrose from '@/images/clients/ellrose.jpeg';
+import darienWeddingRings from '@/images/clients/darien-noel-wedding-rings.jpeg';
+import cloudlyTooGood from '@/images/clients/cloudly-too-good.jpeg';
+import cbWorship from '@/images/clients/cb-worship.jpeg';
+import zachEmptyCups from '@/images/clients/zach-sines-empty-cups.jpeg';
+import mxFlavor from '@/images/clients/minus-expenses-flavor-of-the-week.jpeg';
+import meredithLessonLearned from '@/images/clients/meredith-boyce-lesson-learned.jpeg';
+import darienLaidbackEp from '@/images/clients/darien-noel-ep.jpeg';
+import zachAlone from '@/images/clients/zach-sines-alone.jpeg';
+import zachEmptyCupsAcoustic from '@/images/clients/zach-sines-empty-cups-acoustic.jpeg';
+import darienLaidbackFisherman from '@/images/clients/darien-noel-laidback-fisherman.jpeg';
+import untitledShouldntHave from '@/images/clients/untitled-worship-shouldnt-have.jpeg';
+import frisbeeCarwashKiss from '@/images/clients/frisbee-club-carwash-kiss.jpeg';
+import jonThisIsWar from '@/images/clients/jonathan-murray.jpeg';
+import jonTellMe from '@/images/clients/jon-murray-tell-me.jpeg';
+import yugoTragic from '@/images/clients/yugo-tragic.jpeg';
+import lanceNoIsland from '@/images/clients/lance.jpeg';
+import untitledLive from '@/images/clients/untitled-live.jpeg';
+import maddisonCottonCandy from '@/images/clients/maddison-lopez-cotton-candy.jpeg';
+import empireIstillRemember from '@/images/clients/the-empire.jpeg';
+import meredithChangeYourMind from '@/images/clients/meredith-boyce-change-your-mind.jpeg';
+import bayUnanxious from '@/images/clients/bayceiline-unaxious.PNG';
+import alsoJoeTwoStraws from '@/images/clients/also-joe-two-straws.jpeg';
+import maddisonHYAMLC from '@/images/clients/maddison-hyamlc.PNG';
+import maddisonNatural from '@/images/clients/maddison-natural.PNG';
+import meredithLovebug from '@/images/clients/meredith-boyce-lovebug.PNG';
+import untitledFullyPersuaded from '@/images/clients/untitled-fully-persuaded.PNG';
+import untitledJustToBeClose from '@/images/clients/untitled-just-to-be-close.PNG';
+import untitledLifeline from '@/images/clients/untitled-lifeline.PNG';
+import frisbeeAnymore from '@/images/clients/frisbee-anymore.PNG';
 
 const artists = [
     {
@@ -41,11 +41,6 @@ const artists = [
       song: 'Wedding Rings'
     },
     {
-      artwork: cloudlyTooGood,
-      artist: 'Cloudly',
-      song: 'Too Good'
-    },
-    {
       artwork: jonThisIsWar,
       artist: 'Jonathan Murray',
       song: 'This Is War'
@@ -56,14 +51,14 @@ const artists = [
       song: 'Lesson Learned'
     },
     {
-      artwork: lanceNoIsland,
-      artist: 'Lance',
-      song: 'No Man Is An Island'
-    },
-    {
       artwork: untitledShouldntHave,
       artist: 'Untitled Worship',
       song: "Shouldn't have"
+    },
+    {
+      artwork: lanceNoIsland,
+      artist: 'Lance',
+      song: 'No Man Is An Island'
     },
     {
       artwork: zachEmptyCups,
@@ -82,7 +77,7 @@ const artists = [
     },
     {
       artwork: untitledLifeline,
-      artist: 'Untitle Worship',
+      artist: 'Untitled Worship',
       song: 'Lifeline'
     },
     {
@@ -109,6 +104,11 @@ const artists = [
       artwork: zachEmptyCupsAcoustic,
       artist: 'Zach Sines',
       song: 'Empty Cups Acoustic'
+    },
+    {
+      artwork: cloudlyTooGood,
+      artist: 'Cloudly',
+      song: 'Too Good'
     },
     {
       artwork: darienLaidbackEp,
