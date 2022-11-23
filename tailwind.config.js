@@ -15,7 +15,6 @@ module.exports = {
       pink: colors.pink,
       teal: colors.teal,
       sky: colors.sky,
-      indigo: colors.indigo,
     },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],

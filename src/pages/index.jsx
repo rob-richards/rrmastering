@@ -21,7 +21,7 @@ function Hero() {
       </div>
       <div className="grid md:grid-cols-5 grid-cols-3 gap-4 mt-12 justify-items-center">
         <div className="col-start-2 md:col-start-3">
-          <Button type="submit" className="ml-0 flex-none bg-indigo-600 hover:bg-indigo-700">
+          <Button type="submit" className="ml-0 flex-none bg-sky-500 hover:bg-sky-600">
             Book a Session
           </Button>
         </div>
@@ -36,12 +36,13 @@ function Photos() {
       <div className="grid grid-cols-5 gap-0">
         {artists.map(artist => (
           <div
-            key={artist.artwork}
+            key={artist.song}
             className={clsx(
               'relative aspect-[10/10] w-100 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800'
             )}
           >
             <Image
+              key={artist.song}
               src={artist.artwork}
               alt={`${artist.artist} - ${artist.song}`}
               sizes="(max-width: 600px) 18rem, 11rem"
