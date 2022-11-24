@@ -114,7 +114,7 @@ export default function TapTempo({
 
   return (
     <div className="border-b" id="tap-tempo" name="tap-tempo">
-      <div className="text-4xl tracking-tight font-thin text-grey-700 text-center pt-8 mt-8">
+      <div className="text-4xl tracking-tight font-thin text-grey-700 text-center mt-8">
         Tap Tempo
       </div>
       <div className="sm:px-20 text-center italic font-sans text-gray-500 mt-2">

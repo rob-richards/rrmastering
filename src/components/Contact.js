@@ -74,7 +74,7 @@ export default function Contact() {
           </p>
           <p className="mt-4 text-lg leading-6 text-zinc-500">
             Fill out your information below and say hello! I&apos;d love to
-            hear more about your project and see how I can help! If you just want to connect and/or talk shop, that's cool too! Can't wait to hear form you.
+            hear more about your project and see how I can help! If you just want to connect and/or talk shop, that's cool too! Can't wait to hear from you.
           </p>
         </div>
         {errorMessage && (

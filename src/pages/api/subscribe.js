@@ -6,7 +6,7 @@ const API_KEY = process.env.WD_MAILCHIMP_API_KEY;
 
 mailchimp.setConfig({
   apiKey: API_KEY,
-  server: 'us5',
+  server: 'us18',
 });
 
 export default async (req, res) => {
@@ -18,56 +18,34 @@ export default async (req, res) => {
     artist,
   } = req.body;
 
+  console.log('req.body: >>>>>>>>>> ', req.body);
+
   if (honey) {
     return res.status(400).json({ error: 'You are a bot' });
   }
-
-  // Interests IDs
-  // Mastering: e7a83a790b
-  // Mixing: d3cc318dda
-  // Inquiry: b77d0f3dea
-  // HighRes: 14ed8a75c3
-  // Early Access: c8f76e59dd
 
   try {
     let data;
     let md5Email;
     const interestsList = ['Inquiry'];
 
-    if (updatesemail) {
-      md5Email = md5(updatesemail.toLowerCase());
-      data = {
-        email_address: updatesemail,
-        status_if_new: 'subscribed',
-        tags: ['Early Access'],
-        interests: {
-          c8f76e59dd: true,
-        },
-        status: 'subscribed',
-      };
-    } else {
-      if (!email || !name) {
-        return res.status(400).json({ error: 'A required field is missing' });
-      }
-
-      md5Email = md5(email.toLowerCase());
-      data = {
-        email_address: email,
-        status_if_new: 'subscribed',
-        merge_fields: {
-          COMMENTS: comments,
-          NAME: name,
-          ARTIST: artist,
-        },
-        interests: {
-          b77d0f3dea: true,
-          e7a83a790b: !!mastering,
-          d3cc318dda: !!mixing,
-        },
-        tags: interestsList,
-        status: 'subscribed',
-      };
+    if (!email || !name) {
+      return res.status(400).json({ error: 'A required field is missing' });
     }
+
+    md5Email = md5(email.toLowerCase());
+    data = {
+      email_address: email,
+      status_if_new: 'subscribed',
+      merge_fields: {
+        MESSAGE: comments,
+        NAME: name,
+        ARTIST: artist,
+      },
+      interests: {},
+      tags: interestsList,
+      status: 'subscribed',
+    };
 
     const response = await mailchimp.lists.setListMember(
       LIST_ID,
