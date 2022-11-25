@@ -45,7 +45,7 @@ export default function About() {
         <title>About - Rob Richards</title>
         <meta
           name="description"
-          content="I'm Rob Richards. I live in New York City, where I design the future."
+          content="I'm Rob Richards. I live in Nashville, where I make music sound amazing everywhere it's heard."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -61,6 +61,14 @@ export default function About() {
             </div>
           </div>
           <div className="lg:pl-20">
+            <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+              Hey, I'm Rob
+            </h2>
+            <div className="pb-10 text-base text-zinc-600 dark:text-zinc-400">
+              I'm passionate about the quality of music and making it sound and
+              feel like a record. I'd love to help with your next project! Email
+              me and follow me on socials to say hi!
+            </div>
             <ul role="list">
               <SocialLink
                 href="https://twitter.com/robwrichards"
