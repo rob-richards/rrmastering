@@ -42,10 +42,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Spencer Sharp</title>
+        <title>About - Rob Richards</title>
         <meta
           name="description"
-          content="I'm Spencer Sharp. I live in New York City, where I design the future."
+          content="I'm Rob Richards. I live in New York City, where I design the future."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -62,10 +62,18 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="https://twitter.com/robwrichards" target="_blank" icon={TwitterIcon}>
+              <SocialLink
+                href="https://twitter.com/robwrichards"
+                target="_blank"
+                icon={TwitterIcon}
+              >
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="https://www.instagram.com/robrichardsmastering/" icon={InstagramIcon} className="mt-4">
+              <SocialLink
+                href="https://www.instagram.com/robrichardsmastering/"
+                icon={InstagramIcon}
+                className="mt-4"
+              >
                 Follow on Instagram
               </SocialLink>
               <SocialLink
