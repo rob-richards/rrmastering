@@ -4,7 +4,6 @@ import clsx from 'clsx';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import Form from '@/components/Form';
 import Contact from '@/components/Contact';
 import artists from '@/data/artists';
 import { generateRssFeed } from '@/lib/generateRssFeed';
