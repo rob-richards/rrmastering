@@ -18,6 +18,7 @@ export default function Contact() {
   // Hold a message in state to handle the response from the API.
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [pendingSubmit, setPendingSubmit] = useState(false);
 
   const [hasValidEmail, setValidEmail] = useState(false);
 
@@ -26,6 +27,7 @@ export default function Contact() {
   const subscribe = async (data, e) => {
     e.preventDefault();
     setErrorMessage('');
+    setPendingSubmit(true);
 
     const res = await fetch('/api/subscribe', {
       body: JSON.stringify({
@@ -210,9 +212,9 @@ export default function Contact() {
                 </label>
                 <div className="my-5">
                   <button
-                    // disabled={!isValid || !hasValidEmail}
+                    disabled={pendingSubmit}
                     type="submit"
-                    className={`inline-flex w-full items-center justify-center rounded-md border border-transparent bg-sky-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 `}
+                    className={`inline-flex w-full items-center justify-center rounded-md border border-transparent bg-sky-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 disabled:bg-zinc-500`}
                   >
                     Submit
                   </button>
