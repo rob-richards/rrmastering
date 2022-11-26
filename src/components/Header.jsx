@@ -5,7 +5,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import logoImage from '@/images/rr-logo.svg'
+import logoImage from '@/images/rr-logo-new.svg'
 import { Fragment, useRef } from 'react'
 
 function CloseIcon(props) {
