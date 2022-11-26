@@ -170,7 +170,7 @@ export default function Contact() {
                   </span>
                 </label>
               </div>
-              <div className="grid grid-cols-1 gap-6 sm:col-span-2">
+              <div className="gap-6 col-span-2">
                 <label className="block">
                   <span className="block text-sm font-medium text-zinc-700">Artist name</span>
                   <input
