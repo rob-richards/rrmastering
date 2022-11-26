@@ -197,7 +197,7 @@ export default function NoteToFrequency({
         This displays the frequency value of notes and scale intervals
       </div>
       <div className="w-full mt-5 mb-10 grid grid-cols-12">
-        <div className="inline-block m-auto col-start-3 col-span-3 w-full mb-3 sm:mb-0">
+        <div className="inline-block m-auto col-start-1 md:col-start-3 md:col-span-3 col-span-5 w-full mb-3 sm:mb-0">
           <KeySelect
             className="inline-block"
             updateKey={updateKey}
@@ -206,7 +206,7 @@ export default function NoteToFrequency({
             updateScale={updateScale}
           />
         </div>
-        <div className="inline-block m-auto col-start-8 col-span-3 w-full mb-3 sm:mb-0">
+        <div className="inline-block m-auto col-start-8 md:col-start-8 md:col-span-3 col-span-5 w-full mb-3 sm:mb-0">
           <ScaleSelect
             className="inline-block"
             selectedScale={selectedScale}
@@ -217,8 +217,8 @@ export default function NoteToFrequency({
         </div>
       </div>
       <div className="w-full mt-5 mb-10">
-        <div className="col-span-5 col-start-1 sm:col-span-3 mb-3 sm:mb-0 m-auto w-max m-auto">
-          <div className="text-sm text-gray-600 mb-1 inline-block w-full m-auto text-center">
+        <div className="col-span-5 col-start-1 sm:col-span-3 mb-3 sm:mb-0 m-auto m-auto">
+          <div className="text-sm text-gray-600 mb-1 inline-block w-full m-auto text-center hidden md:block">
             Select octave range to display
           </div>
           <div className="w-full sm:w-40 inline-block md:hidden">
@@ -285,7 +285,7 @@ export default function NoteToFrequency({
               </div>
             </Listbox>
           </div>
-          <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto">
+          <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto hidden md:block">
             {octaveRanges.map((range) => (
               <li
                 className="inline-block border-l last:rounded-br-lg last:rounded-tr-lg first:rounded-bl-lg first:rounded-tl-lg overflow-hidden align-bottom"

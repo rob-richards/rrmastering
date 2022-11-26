@@ -20,8 +20,8 @@ function Hero() {
           </h1>
         </div>
       </div>
-      <div className="grid md:grid-cols-5 grid-cols-3 gap-4 mt-12 justify-items-center">
-        <div className="col-start-2 md:col-start-3">
+      <div className="grid md:grid-cols-5 grid-cols-1 gap-4 mt-12 justify-items-center">
+        <div className="col-start-1 md:col-start-3">
           <Button type="submit" className="ml-0 flex-none bg-sky-500 hover:bg-sky-600">
             <RsLink
               activeClass="active"
@@ -45,7 +45,7 @@ function Hero() {
 function Photos() {
   return (
     <div className="mt-0 mb-16">
-      <div className="grid grid-cols-5 gap-0">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-0">
         {artists.map(artist => (
           <div
             key={artist.song}
