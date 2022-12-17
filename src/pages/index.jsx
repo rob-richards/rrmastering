@@ -16,7 +16,7 @@ function Hero() {
       <div className="grid grid-cols-5 gap-4">
         <div className="col-start-1 col-span-5 md:col-span-3 md:col-start-2">
           <h1 className="text-4xl text-center font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl w-full">
-            Don't just hope your music will translate,<br />know that it will.
+            Don't just hope your music translates, know that it will.
           </h1>
         </div>
       </div>
