@@ -62,7 +62,7 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-              Hey, I'm Rob
+              Hey I'm Rob! I'm a Mastering Engineer from Nashville, TN.
             </h2>
             <div className="pb-10 text-base text-zinc-600 dark:text-zinc-400">
               I'm passionate about the quality of music and making it sound and
