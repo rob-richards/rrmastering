@@ -10,15 +10,7 @@ mailchimp.setConfig({
 });
 
 export default async (req, res) => {
-  const {
-    comments,
-    email,
-    honey,
-    name,
-    artist,
-  } = req.body;
-
-  console.log('req.body: >>>>>>>>>> ', req.body);
+  const { comments, email, honey, name, artist } = req.body;
 
   if (honey) {
     return res.status(400).json({ error: 'You are a bot' });
