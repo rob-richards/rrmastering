@@ -28,22 +28,18 @@ export default async (req, res) => {
     md5Email = md5(email.toLowerCase());
     data = {
       email_address: email,
-      status_if_new: 'subscribed',
+      interests: {},
       merge_fields: {
         MESSAGE: comments,
         NAME: name,
         ARTIST: artist,
       },
-      interests: {},
-      tags: interestsList,
       status: 'subscribed',
+      status_if_new: 'subscribed',
+      tags: interestsList,
     };
 
-    const response = await mailchimp.lists.setListMember(
-      LIST_ID,
-      md5Email,
-      data
-    );
+    const response = await client.lists.setListMember(LIST_ID, md5Email, data);
 
     if (response.status >= 400) {
       return res.status(400).json({

@@ -14,15 +14,18 @@ function Hero() {
   return (
     <>
       <div className="grid grid-cols-5 gap-4">
-        <div className="col-start-1 col-span-5 md:col-span-3 md:col-start-2">
-          <h1 className="text-4xl text-center font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl w-full">
-            Don't just hope your music translates, know that it will.
+        <div className="col-span-5 col-start-1 md:col-span-3 md:col-start-2">
+          <h1 className="w-full text-center text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            Don't hope your music translates, know that it will.
           </h1>
         </div>
       </div>
-      <div className="grid md:grid-cols-5 grid-cols-1 gap-4 mt-12 justify-items-center">
+      <div className="mt-12 grid grid-cols-1 justify-items-center gap-4 md:grid-cols-5">
         <div className="col-start-1 md:col-start-3">
-          <Button type="submit" className="ml-0 flex-none bg-sky-500 hover:bg-sky-600">
+          <Button
+            type="submit"
+            className="ml-0 flex-none bg-sky-500 hover:bg-sky-600"
+          >
             <RsLink
               activeClass="active"
               className={''}
@@ -39,18 +42,18 @@ function Hero() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
 function Photos() {
   return (
     <div className="mt-0 mb-16">
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-0">
-        {artists.map(artist => (
+      <div className="grid grid-cols-3 gap-0 md:grid-cols-5">
+        {artists.map((artist) => (
           <div
             key={artist.song}
             className={clsx(
-              'relative aspect-[10/10] w-100 flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800'
+              'w-100 relative aspect-[10/10] flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800'
             )}
           >
             <Image
@@ -59,13 +62,13 @@ function Photos() {
               alt={`${artist.artist} - ${artist.song}`}
               sizes="(max-width: 600px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
-              layout='fill'
+              layout="fill"
             />
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default function Home({ articles }) {
@@ -80,7 +83,7 @@ export default function Home({ articles }) {
           content="I'm Rob, a mastering engineer from Nashville, TN. I make music sound amazing everywhere it's heard. Headphones, car, laptop, surround sound. I make sure it translates so the listener can connect with your music."
         />
       </Head>
-      <Container className="flex mt-16 md:mt-24 mb-16 w-full">
+      <Container className="mt-16 mb-16 flex w-full md:mt-24">
         <Hero />
       </Container>
       <Photos />
@@ -88,12 +91,12 @@ export default function Home({ articles }) {
         <Contact />
       </Container>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
   if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
+    await generateRssFeed();
   }
 
   return {
@@ -102,5 +105,5 @@ export async function getStaticProps() {
         .slice(0, 4)
         .map(({ component, ...meta }) => meta),
     },
-  }
+  };
 }
