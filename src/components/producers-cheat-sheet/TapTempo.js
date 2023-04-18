@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 export default function TapTempo({
@@ -13,33 +13,6 @@ export default function TapTempo({
   const tempoRef = useRef();
   let averageBPM;
 
-  const tapToTempo = (e) => {
-    const code = e.keyCode || e.charCode;
-
-    // Spacebar and enter tap
-    if (code === 32) {
-      updateDuration(0.25);
-
-      if (numTaps === 0) {
-        const setStartTapTime = new Date().getTime();
-        getStartTapTime(setStartTapTime);
-      }
-
-      const updateTaps = numTaps + 1;
-      getNumTaps(updateTaps);
-
-      const now = new Date().getTime();
-      const ms = now - startTapTime;
-      const min = ms / 60000;
-      averageBPM = Math.round(numTaps / min);
-
-      updateBPM(averageBPM);
-      updateTypedBPM(averageBPM);
-    }
-
-    return averageBPM;
-  };
-
   // Reset input when the user clicks off of the bpm input
   const resetInput = () => {
     updateDuration(0.25);
@@ -49,28 +22,61 @@ export default function TapTempo({
     updateTypedBPM(120);
   };
 
-  if (process.browser) {
-    const body = document.querySelector('body');
-    body.onkeydown = (e) => {
-      const code = e.keyCode || e.charCode;
+  useEffect(() => {
+    const tapToTempo = (e) => {
+      // Spacebar and enter tap
+      if (e.code === ('Space' || 'Enter)')) {
+        updateDuration(0.25);
 
-      // Spacebar pressed
-      if (code === 32) {
-        if (!e.metaKey) {
-          e.preventDefault();
-          tempoRef.current.blur();
+        if (numTaps === 0) {
+          const setStartTapTime = new Date().getTime();
+          getStartTapTime(setStartTapTime);
         }
 
-        tapToTempo(e);
+        const updateTaps = numTaps + 1;
+        getNumTaps(updateTaps);
+
+        console.log('numTaps :>> ', numTaps);
+
+        const now = new Date().getTime();
+        const ms = now - startTapTime;
+        const min = ms / 60000;
+        averageBPM = Math.round(numTaps / min);
+
+        updateBPM(averageBPM);
+        updateTypedBPM(averageBPM);
       }
 
-      // Enter key pressed
-      if (code === 13) {
-        updateBPM(parseInt(typedBPM, 10));
-        updateDuration(0.25);
-      }
+      return averageBPM;
     };
-  }
+
+    const body = document.querySelector('body');
+    if (typeof window) {
+      body.onkeydown = (e) => {
+        // Spacebar pressed
+        if (e.code === 'Space') {
+          e.preventDefault();
+          tempoRef.current.blur();
+
+          tapToTempo(e);
+        }
+
+        // Enter key pressed
+        if (e.code === 'Enter') {
+          updateBPM(parseInt(typedBPM, 10));
+          updateDuration(0.25);
+        }
+      };
+    }
+    return () => (body.onkeydown = () => {});
+  }, [
+    numTaps,
+    getNumTaps,
+    startTapTime,
+    getStartTapTime,
+    typedBPM,
+    updateTypedBPM,
+  ]);
 
   const handleTempoSubmit = () => {
     getNumTaps(0);
@@ -114,22 +120,22 @@ export default function TapTempo({
 
   return (
     <div className="border-b" id="tap-tempo" name="tap-tempo">
-      <div className="text-4xl tracking-tight font-thin text-grey-700 text-center mt-8">
+      <div className="text-grey-700 mt-8 text-center text-4xl font-thin tracking-tight">
         Tap Tempo
       </div>
-      <div className="sm:px-20 text-center italic font-sans text-gray-500 mt-2">
+      <div className="mt-2 text-center font-sans italic text-gray-500 sm:px-20">
         Tap the spacebar to get tempo or enter it in the text box below
       </div>
-      <div className="mx-auto w-full sm:px-32 text-center mb-16">
-        <div className="font-light text-8xl inline-block mr-2 align-middle w-full mb-4 mt-8">
+      <div className="mx-auto mb-16 w-full text-center sm:px-32">
+        <div className="mr-2 mb-4 mt-8 inline-block w-full align-middle text-8xl font-light">
           {deafultBPM}
-          <span className="text-lg font-bold ml-1">bpm</span>
+          <span className="ml-1 text-lg font-bold">bpm</span>
         </div>
-        <div className="inline-block w-full my-5">
-          <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto">
+        <div className="my-5 inline-block w-full">
+          <ul className="m-auto w-max rounded-lg border text-sm text-gray-500">
             <li className="inline-block">
               <input
-                className="w-24 py-2 px-4 rounded-tl-lg rounded-bl-lg outline-none text-center text-lg"
+                className="bpmInput w-24 rounded-tl-lg rounded-bl-lg py-2 px-4 text-center text-lg outline-none"
                 maxLength={3}
                 onChange={(e) =>
                   updateTypedBPM(parseInt(e.target.value, 10) || 0)
@@ -143,7 +149,7 @@ export default function TapTempo({
             </li>
             <li className="inline-block border-l align-top">
               <button
-                className="py-3 px-4 rounded-tr-lg rounded-br-lg outline-none focus:outline-none hover:shadow-inner"
+                className="rounded-tr-lg rounded-br-lg py-3 px-4 outline-none hover:shadow-inner focus:outline-none"
                 type="button"
                 onClick={() => handleTempoSubmit()}
                 // disabled={deafultBPM === typedBPM}
@@ -153,10 +159,10 @@ export default function TapTempo({
             </li>
           </ul>
         </div>
-        <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto">
+        <ul className="m-auto w-max rounded-lg border text-sm text-gray-500">
           <li className="inline-block">
             <button
-              className="inline-block rounded-tl-lg rounded-bl-lg py-2 px-4 focus:outline-none shadow-md hover:shadow-inner"
+              className="inline-block rounded-tl-lg rounded-bl-lg py-2 px-4 shadow-md hover:shadow-inner focus:outline-none"
               type="button"
               onClick={resetInput}
             >
@@ -168,8 +174,8 @@ export default function TapTempo({
               className={`${
                 defaultDuration !== 0.5
                   ? 'shadow-md'
-                  : 'text-sky-500 shadow-inner font-semibold'
-              } inline-block py-2 px-4 shadow-md focus:outline-none hover:shadow-inner`}
+                  : 'font-semibold text-sky-500 shadow-inner'
+              } inline-block py-2 px-4 shadow-md hover:shadow-inner focus:outline-none`}
               type="button"
               onClick={() => getFractionalBPM(0.5)}
             >
@@ -181,8 +187,8 @@ export default function TapTempo({
               className={`${
                 defaultDuration !== 0.25
                   ? 'shadow-md'
-                  : 'text-sky-500 shadow-inner font-semibold'
-              } inline-block py-2 px-4 shadow-md focus:outline-none hover:shadow-inner`}
+                  : 'font-semibold text-sky-500 shadow-inner'
+              } inline-block py-2 px-4 shadow-md hover:shadow-inner focus:outline-none`}
               type="button"
               onClick={() => getFractionalBPM(0.25)}
             >
@@ -194,8 +200,8 @@ export default function TapTempo({
               className={`${
                 defaultDuration !== 0.125
                   ? 'shadow-md'
-                  : 'text-sky-500 shadow-inner font-semibold'
-              } inline-block rounded-tr-lg rounded-br-lg py-2 px-4 shadow-md focus:outline-none hover:shadow-inner `}
+                  : 'font-semibold text-sky-500 shadow-inner'
+              } inline-block rounded-tr-lg rounded-br-lg py-2 px-4 shadow-md hover:shadow-inner focus:outline-none `}
               type="button"
               onClick={() => getFractionalBPM(0.125)}
             >

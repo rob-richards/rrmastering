@@ -1,10 +1,10 @@
-import React, { useReducer } from 'react'
-import Head from 'next/head'
-import { Link as RsLink } from 'react-scroll'
-import { Container } from '@/components/Container'
-import BPMToMs from '@/components/producers-cheat-sheet/BPMToMs'
-import TapTempo from '@/components/producers-cheat-sheet/TapTempo'
-import NoteToFrequency from '@/components/producers-cheat-sheet/NoteToFrequency'
+import React, { useReducer } from 'react';
+import Head from 'next/head';
+import { Link as RsLink } from 'react-scroll';
+import { Container } from '@/components/Container';
+import BPMToMs from '@/components/producers-cheat-sheet/BPMToMs';
+import TapTempo from '@/components/producers-cheat-sheet/TapTempo';
+import NoteToFrequency from '@/components/producers-cheat-sheet/NoteToFrequency';
 
 const ACTIONS = {
   BPM: 'bpm',
@@ -12,7 +12,7 @@ const ACTIONS = {
   KEY: 'key',
   OCTAVE_RANGE: 'range',
   SCALE: 'scale',
-}
+};
 
 const initialState = {
   bpm: 120,
@@ -22,7 +22,7 @@ const initialState = {
   profileName: 'Default Profile',
   octaveRange: null,
   scale: 'Major',
-}
+};
 
 function cheatSheetReducer(state, action) {
   switch (action.type) {
@@ -30,75 +30,75 @@ function cheatSheetReducer(state, action) {
       return {
         ...state,
         bpm: action.bpm,
-      }
+      };
     }
     case ACTIONS.DURATION: {
       return {
         ...state,
         duration: action.duration,
-      }
+      };
     }
     case ACTIONS.KEY: {
       return {
         ...state,
         key: action.key,
-      }
+      };
     }
     case ACTIONS.OCTAVE_RANGE: {
       return {
         ...state,
         octaveRange: action.octaveRange,
-      }
+      };
     }
     case ACTIONS.SCALE: {
       return {
         ...state,
         scale: action.scale,
-      }
+      };
     }
     default:
-      return state
+      return state;
   }
 }
 
 export default function CheatSheet() {
-  const [state, dispatch] = useReducer(cheatSheetReducer, initialState)
-  const { bpm, key, scale } = state
+  const [state, dispatch] = useReducer(cheatSheetReducer, initialState);
+  const { bpm, key, scale } = state;
 
   const updateBPM = (newBPM) => {
     dispatch({
       type: 'bpm',
       bpm: newBPM,
-    })
-  }
+    });
+  };
 
   const updateDuration = (newDuration) => {
     dispatch({
       type: 'duration',
       duration: newDuration,
-    })
-  }
+    });
+  };
 
   const updateKey = (newKey) => {
     dispatch({
       type: 'key',
       key: newKey,
-    })
-  }
+    });
+  };
 
   const updateOctaveRange = (newRange) => {
     dispatch({
       type: 'range',
       octaveRange: newRange,
-    })
-  }
+    });
+  };
 
   const updateScale = (newScale) => {
     dispatch({
       type: 'scale',
       scale: newScale,
-    })
-  }
+    });
+  };
 
   const renderBreadcrumbArrow = (
     <svg
@@ -113,10 +113,10 @@ export default function CheatSheet() {
         clipRule="evenodd"
       />
     </svg>
-  )
+  );
 
   const linkStyles =
-    'text-base font-medium pt-3 hover:text-indigo-700 cursor-pointer'
+    'text-base font-medium pt-3 hover:text-indigo-700 cursor-pointer';
 
   const renderScrollLink = (linkText, linkAnchor) => (
     <RsLink
@@ -131,7 +131,7 @@ export default function CheatSheet() {
     >
       {linkText}
     </RsLink>
-  )
+  );
 
   return (
     <>
