@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import Head from 'next/head'
 import { Link as RsLink } from 'react-scroll'
 import { Container } from '@/components/Container'
 import BPMToMs from '@/components/producers-cheat-sheet/BPMToMs'
@@ -133,59 +134,68 @@ export default function CheatSheet() {
   )
 
   return (
-    <Container noSpace={true}>
-      <div className="mx-auto my-10 px-0 pb-10">
-        <div className="h-auto rounded-br-lg rounded-bl-lg bg-white p-0 pt-10 text-gray-900">
-          <div className="relative grid grid-flow-row grid-cols-5 grid-rows-1 gap-4">
-            <section className="col-span-5 p-5 pl-0 sm:col-span-1 sm:mb-6">
-              <div className="sticky top-6">
-                <ul className="inline-block w-1/2 list-inside sm:mb-8 sm:w-full">
-                  <li className="font-bold">Time</li>
-                  <ul className="border-l-4 pl-3 pr-6">
-                    <li className="py-1">
-                      {renderScrollLink('Tap Tempo', 'tap-tempo')}
-                    </li>
-                    <li className="pb-1">
-                      {renderScrollLink('BPM to Milliseconds', 'bpm-ms')}
-                    </li>
+    <>
+      <Head>
+          <title>Cheat Sheet | Rob Richards Mastering</title>
+          <meta
+            name="description"
+            content="Know the details of your song. BPM to Milliseconds. Note to frequency. Tap tempo."
+          />
+        </Head>
+        <Container noSpace={true}>
+        <div className="mx-auto my-10 px-0 pb-10">
+          <div className="h-auto rounded-br-lg rounded-bl-lg bg-white p-0 pt-10 text-gray-900">
+            <div className="relative grid grid-flow-row grid-cols-5 grid-rows-1 gap-4">
+              <section className="col-span-5 p-5 pl-0 sm:col-span-1 sm:mb-6">
+                <div className="sticky top-6">
+                  <ul className="inline-block w-1/2 list-inside sm:mb-8 sm:w-full">
+                    <li className="font-bold">Time</li>
+                    <ul className="border-l-4 pl-3 pr-6">
+                      <li className="py-1">
+                        {renderScrollLink('Tap Tempo', 'tap-tempo')}
+                      </li>
+                      <li className="pb-1">
+                        {renderScrollLink('BPM to Milliseconds', 'bpm-ms')}
+                      </li>
+                    </ul>
                   </ul>
-                </ul>
-                <ul className="inline-block w-1/2 list-inside align-top sm:w-full">
-                  <li className="font-bold">Frequency</li>
-                  <ul className="border-l-4 pl-3">
-                    <li className="py-1">
-                      {renderScrollLink('Note to Frequency', 'note-frequency')}
-                    </li>
-                    {/* <li className="pb-1">
-                      {renderScrollLink('EQ Presets', 'eq-presets')}
-                    </li> */}
+                  <ul className="inline-block w-1/2 list-inside align-top sm:w-full">
+                    <li className="font-bold">Frequency</li>
+                    <ul className="border-l-4 pl-3">
+                      <li className="py-1">
+                        {renderScrollLink('Note to Frequency', 'note-frequency')}
+                      </li>
+                      {/* <li className="pb-1">
+                        {renderScrollLink('EQ Presets', 'eq-presets')}
+                      </li> */}
+                    </ul>
                   </ul>
-                </ul>
-              </div>
-            </section>
-            <section className="col-span-5 rounded-l px-5 pb-5 shadow-lg sm:col-span-4">
-              {/* <h2 className="text-4xl px-4 sm:px-6 font-bold w-full text-left">
-                Producers Cheat Sheet
-              </h2> */}
-              <TapTempo
-                deafultBPM={bpm || initialState.bpm}
-                defaultDuration={state.duration}
-                updateBPM={updateBPM}
-                updateDuration={updateDuration}
-              />
-              <BPMToMs bpm={bpm || initialState.bpm} />
-              <NoteToFrequency
-                selectedKey={key || initialState.key}
-                selectedScale={scale || initialState.scale}
-                updateKey={updateKey}
-                updateOctaveRange={updateOctaveRange}
-                updateScale={updateScale}
-              />
-              {/* <EQPresets defaultKey={key || initialState.key} /> */}
-            </section>
+                </div>
+              </section>
+              <section className="col-span-5 rounded-l px-5 pb-5 shadow-lg sm:col-span-4">
+                {/* <h2 className="text-4xl px-4 sm:px-6 font-bold w-full text-left">
+                  Producers Cheat Sheet
+                </h2> */}
+                <TapTempo
+                  deafultBPM={bpm || initialState.bpm}
+                  defaultDuration={state.duration}
+                  updateBPM={updateBPM}
+                  updateDuration={updateDuration}
+                />
+                <BPMToMs bpm={bpm || initialState.bpm} />
+                <NoteToFrequency
+                  selectedKey={key || initialState.key}
+                  selectedScale={scale || initialState.scale}
+                  updateKey={updateKey}
+                  updateOctaveRange={updateOctaveRange}
+                  updateScale={updateScale}
+                />
+                {/* <EQPresets defaultKey={key || initialState.key} /> */}
+              </section>
+            </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   )
 }

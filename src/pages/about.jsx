@@ -42,7 +42,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Rob Richards</title>
+        <title>About | Rob Richards Mastering</title>
         <meta
           name="description"
           content="I'm Rob Richards. I live in Nashville, where I make music sound amazing everywhere it's heard."

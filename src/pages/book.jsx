@@ -9,7 +9,7 @@ export default function Book() {
   return (
     <>
       <Head>
-        <title>Projects - Rob Richards</title>
+        <title>Book a Session | Rob Richards Mastering</title>
         <meta
           name="description"
           content="Things I've made trying to put my dent in the universe."
