@@ -4,6 +4,7 @@ import clsx from 'clsx';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
+import { AudioPlayer } from '@/components/AudioPlayer';
 import Contact from '@/components/Contact';
 import artists from '@/data/artists';
 import { generateRssFeed } from '@/lib/generateRssFeed';
@@ -88,6 +89,7 @@ export default function Home({ articles }) {
       </Container>
       <Photos />
       <Container className="mt-0">
+        <AudioPlayer />
         <Contact />
       </Container>
     </>
