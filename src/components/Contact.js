@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { useForm } from 'react-hook-form';
 import validator from 'email-validator';
+import Socials from './Socials';
 
 export default function Contact() {
   const {
@@ -233,6 +234,7 @@ export default function Contact() {
             </div>
           </form>
         )}
+        <Socials />
       </div>
     </div>
   );

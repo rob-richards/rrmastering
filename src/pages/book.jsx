@@ -19,5 +19,5 @@ export default function Book() {
         <Contact />
       </SimpleLayout>
     </>
-  )
+  );
 }
