@@ -29,6 +29,8 @@ export default function Contact() {
     setErrorMessage('');
     setPendingSubmit(true);
 
+    console.log('data :>> ', data);
+
     const res = await fetch('/api/subscribe', {
       body: JSON.stringify({
         comments: data.comments,
@@ -68,24 +70,26 @@ export default function Contact() {
   };
 
   return (
-    <div className="antialiased px-6" id="contact">
-      <div className="max-w-xl mx-auto pt-10 lg:py-12 md:max-w-2xl">
-        <div className="lg:text-center mb-10">
+    <div className="px-6 antialiased" id="contact">
+      <div className="mx-auto max-w-xl pt-10 md:max-w-2xl lg:py-12">
+        <div className="mb-10 lg:text-center">
           <p className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
             Book a Session
           </p>
           <p className="mt-4 text-lg leading-6 text-zinc-500">
-            Fill out your information below and say hello! I&apos;d love to
-            hear more about your project and see how I can help! If you just want to connect and/or talk shop, that's cool too! Can't wait to hear from you.
+            Fill out your information below and say hello! I&apos;d love to hear
+            more about your project and see how I can help! If you just want to
+            connect and/or talk shop, that's cool too! Can't wait to hear from
+            you.
           </p>
         </div>
         {errorMessage && (
-          <div className="my-3 text-red-600">{errorMessage}</div>
+          <div className="text-red-600 my-3">{errorMessage}</div>
         )}
         {successMessage ? (
-          <div className="h-96 flex content-center justify-center">
+          <div className="flex h-96 content-center justify-center">
             <Transition
-              className="flex items-top mt-10"
+              className="items-top mt-10 flex"
               show={successMessage !== ''}
             >
               <Transition.Child
@@ -97,7 +101,7 @@ export default function Contact() {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <div className="inline-block w-10 h-10 mr-4">
+                <div className="mr-4 inline-block h-10 w-10">
                   <svg
                     className="text-green-500"
                     xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +133,7 @@ export default function Contact() {
           </div>
         ) : (
           <form onSubmit={handleSubmit(subscribe)} ref={formRef}>
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-6 items-start">
+            <div className="grid grid-cols-2 items-start gap-6 md:grid-cols-2">
               <div className="grid grid-cols-1 gap-6">
                 <label className="block">
                   <span className="block text-sm font-medium text-zinc-700">
@@ -137,7 +141,7 @@ export default function Contact() {
                     <span className="text-red-600">*</span>
                   </span>
                   <input
-                    className="border block w-full rounded-md border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500"
+                    className="block w-full rounded-md border border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500"
                     id="name-input"
                     name="name"
                     onChange={() => {}}
@@ -159,7 +163,7 @@ export default function Contact() {
                     <span className="text-red-600">*</span>
                   </span>
                   <input
-                    className="border block w-full rounded-md border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500"
+                    className="block w-full rounded-md border border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500"
                     id="email-input"
                     name="email"
                     onChange={validateEmail}
@@ -172,11 +176,13 @@ export default function Contact() {
                   </span>
                 </label>
               </div>
-              <div className="gap-6 col-span-2">
+              <div className="col-span-2 gap-6">
                 <label className="block">
-                  <span className="block text-sm font-medium text-zinc-700">Artist name</span>
+                  <span className="block text-sm font-medium text-zinc-700">
+                    Artist name
+                  </span>
                   <input
-                    className="border block w-full rounded-md border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500"
+                    className="block w-full rounded-md border border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500"
                     id="artist-input"
                     name="artist"
                     onChange={() => {}}
@@ -198,13 +204,13 @@ export default function Contact() {
                   />
                 </label>
               </div>
-              <div className="grid grid-cols-1 col-span-2 gap-6">
+              <div className="col-span-2 grid grid-cols-1 gap-6">
                 <label className="block">
                   <span className="block text-sm font-medium text-zinc-700">
                     Tell me about your project!
                   </span>
                   <textarea
-                    className="border block w-full rounded-md border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-300 focus:ring-sky-500"
+                    className="block w-full rounded-md border border-zinc-300 py-3 px-4 shadow-sm focus:border-sky-300 focus:ring-sky-500"
                     name="comments"
                     rows="5"
                     {...register('comments')}

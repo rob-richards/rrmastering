@@ -39,7 +39,11 @@ export default async (req, res) => {
       tags: interestsList,
     };
 
-    const response = await client.lists.setListMember(LIST_ID, md5Email, data);
+    const response = await mailchimp.lists.setListMember(
+      LIST_ID,
+      md5Email,
+      data
+    );
 
     if (response.status >= 400) {
       return res.status(400).json({
