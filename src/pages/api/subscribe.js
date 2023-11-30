@@ -3,10 +3,11 @@ const md5 = require('md5');
 
 const LIST_ID = process.env.WD_MAILCHIMP_LIST_ID;
 const API_KEY = process.env.WD_MAILCHIMP_API_KEY;
+const SERVER = process.env.WD_MAILCHIMP_SERVER;
 
 mailchimp.setConfig({
   apiKey: API_KEY,
-  server: 'us18',
+  server: SERVER,
 });
 
 export default async (req, res) => {
