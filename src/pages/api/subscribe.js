@@ -55,9 +55,8 @@ export default async (req, res) => {
 
     return res.status(201).json({ error: '' });
   } catch (error) {
-    const { body } = error.response;
-
-    if (body.title === 'Member Exists') {
+    console.log('error :>> ', error);
+    if (error.title === 'Member Exists') {
       return res
         .status(500)
         .json({ error: `Error: ${email} is already a list member.` });

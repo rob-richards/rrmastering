@@ -136,13 +136,13 @@ export default function CheatSheet() {
   return (
     <>
       <Head>
-          <title>Cheat Sheet | Rob Richards Mastering</title>
-          <meta
-            name="description"
-            content="Know the details of your song. BPM to Milliseconds. Note to frequency. Tap tempo."
-          />
-        </Head>
-        <Container noSpace={true}>
+        <title>Cheat Sheet | Rob Richards Mastering</title>
+        <meta
+          name="description"
+          content="Know the details of your song. BPM to Milliseconds. Note to frequency. Tap tempo."
+        />
+      </Head>
+      <Container noSpace={true}>
         <div className="mx-auto my-10 px-0 pb-10">
           <div className="h-auto rounded-br-lg rounded-bl-lg bg-white p-0 pt-10 text-gray-900">
             <div className="relative grid grid-flow-row grid-cols-5 grid-rows-1 gap-4">
@@ -163,7 +163,10 @@ export default function CheatSheet() {
                     <li className="font-bold">Frequency</li>
                     <ul className="border-l-4 pl-3">
                       <li className="py-1">
-                        {renderScrollLink('Note to Frequency', 'note-frequency')}
+                        {renderScrollLink(
+                          'Note to Frequency',
+                          'note-frequency'
+                        )}
                       </li>
                       {/* <li className="pb-1">
                         {renderScrollLink('EQ Presets', 'eq-presets')}
@@ -197,5 +200,5 @@ export default function CheatSheet() {
         </div>
       </Container>
     </>
-  )
+  );
 }
