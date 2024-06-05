@@ -147,23 +147,23 @@ export default function NoteToFrequency({
 
   const renderFrequencyRow = (note, i) => (
     <tr key={`${note.note}${note.octave}`}>
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className="whitespace-nowrap px-6 py-4">
         <div className="text text-gray-900">{note.octave}</div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className="whitespace-nowrap px-6 py-4">
         <div className="text text-gray-900">{note.note}</div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className="whitespace-nowrap px-6 py-4">
         <div className="text-md text-gray-900">{note.frequency}hz</div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className="whitespace-nowrap px-6 py-4">
         <div className="text text-gray-900">
           {selectedKey !== null && selectedKey !== 'Show All'
             ? getIntervalName(note.interval + 1)
             : '-'}
         </div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className="whitespace-nowrap px-6 py-4">
         <div className="text text-gray-900">{note.wavelength}cm</div>
       </td>
     </tr>
@@ -190,14 +190,14 @@ export default function NoteToFrequency({
 
   return (
     <div className="mb-0" id="note-frequency" name="note-frequency">
-      <div className="text-4xl tracking-tight font-thin text-grey-700 text-center pt-8 mt-8">
+      <div className="text-grey-700 mt-8 pt-8 text-center text-4xl font-thin tracking-tight">
         Note to Frequency
       </div>
-      <div className="sm:px-20 text-center italic font-sans text-gray-500 mt-2 mb-12">
+      <div className="mt-2 mb-12 text-center font-sans italic text-gray-500 sm:px-20">
         This displays the frequency value of notes and scale intervals
       </div>
-      <div className="w-full mt-5 mb-10 grid grid-cols-12">
-        <div className="inline-block m-auto col-start-1 md:col-start-3 md:col-span-3 col-span-5 w-full mb-3 sm:mb-0">
+      <div className="mt-5 mb-10 grid w-full grid-cols-12">
+        <div className="col-span-5 col-start-1 m-auto mb-3 inline-block w-full sm:mb-0 md:col-span-3 md:col-start-3">
           <KeySelect
             className="inline-block"
             updateKey={updateKey}
@@ -206,7 +206,7 @@ export default function NoteToFrequency({
             updateScale={updateScale}
           />
         </div>
-        <div className="inline-block m-auto col-start-8 md:col-start-8 md:col-span-3 col-span-5 w-full mb-3 sm:mb-0">
+        <div className="col-span-5 col-start-8 m-auto mb-3 inline-block w-full sm:mb-0 md:col-span-3 md:col-start-8">
           <ScaleSelect
             className="inline-block"
             selectedScale={selectedScale}
@@ -216,22 +216,22 @@ export default function NoteToFrequency({
           />
         </div>
       </div>
-      <div className="w-full mt-5 mb-10">
-        <div className="col-span-5 col-start-1 sm:col-span-3 mb-3 sm:mb-0 m-auto m-auto">
-          <div className="text-sm text-gray-600 mb-1 inline-block w-full m-auto text-center hidden md:block">
+      <div className="mt-5 mb-10 w-full">
+        <div className="col-span-5 col-start-1 m-auto mb-3 sm:col-span-3 sm:mb-0">
+          <div className="m-auto mb-1 inline-block w-full text-center text-sm text-gray-600 md:block">
             Select octave range to display
           </div>
-          <div className="w-full sm:w-40 inline-block md:hidden">
-            <div className="text-sm text-gray-600 mb-1">
+          <div className="inline-block w-full sm:w-40 md:hidden">
+            <div className="mb-1 text-sm text-gray-600">
               Select Octave Range:
             </div>
             <Listbox value={activeRange} onChange={onChangeRange}>
               <div className="relative mt-1">
-                <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm border">
+                <Listbox.Button className="focus-visible:ring-offset-orange-300 focus-visible:border-indigo-500 relative w-full cursor-default rounded-lg border bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-sm">
                   <span className="block truncate">{activeRange}</span>
-                  <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                     <ChevronUpDownIcon
-                      className="w-5 h-5 text-gray-400"
+                      className="h-5 w-5 text-gray-400"
                       aria-hidden="true"
                     />
                   </span>
@@ -242,7 +242,7 @@ export default function NoteToFrequency({
                   leaveFrom="opacity-100"
                   leaveTo="opacity-0"
                 >
-                  <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-30">
+                  <Listbox.Options className="ring-black absolute z-30 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-opacity-5 focus:outline-none sm:text-sm">
                     {octaveRanges.map((range) => (
                       <Listbox.Option
                         key={range}
@@ -251,7 +251,7 @@ export default function NoteToFrequency({
                             active
                               ? 'text-amber-900 bg-amber-100'
                               : 'text-gray-900'
-                          } cursor-default select-none relative py-2 pl-10 pr-4`
+                          } relative cursor-default select-none py-2 pl-10 pr-4`
                         }
                         value={range}
                       >
@@ -271,7 +271,7 @@ export default function NoteToFrequency({
                                 } absolute inset-y-0 left-0 flex items-center pl-3`}
                               >
                                 <CheckIcon
-                                  className="w-5 h-5"
+                                  className="h-5 w-5"
                                   aria-hidden="true"
                                 />
                               </span>
@@ -285,18 +285,20 @@ export default function NoteToFrequency({
               </div>
             </Listbox>
           </div>
-          <ul className="border rounded-lg w-max text-gray-500 text-sm m-auto hidden md:block">
+          <ul className="m-auto hidden w-max rounded-lg border text-sm text-gray-500 md:block">
             {octaveRanges.map((range) => (
               <li
-                className="inline-block border-l last:rounded-br-lg last:rounded-tr-lg first:rounded-bl-lg first:rounded-tl-lg overflow-hidden align-bottom"
+                className={`inline-block overflow-hidden border-l align-bottom first:rounded-bl-lg first:rounded-tl-lg last:rounded-br-lg last:rounded-tr-lg hover:shadow-inner ${
+                  activeRange !== range ? 'shadow-md' : ''
+                }`}
                 key={range}
               >
                 <button
                   className={`${
                     activeRange !== range
                       ? 'shadow-md'
-                      : 'text-sky-500 shadow-inner font-semibold'
-                  } inline-block py-2 px-4 shadow-md focus:outline-none hover:shadow-inner`}
+                      : 'font-semibold text-sky-500 shadow-inner'
+                  } inline-block py-2 px-4 shadow-md focus:outline-none`}
                   type="button"
                   value={range}
                   onClick={() => onChangeRange(range)}
@@ -310,44 +312,44 @@ export default function NoteToFrequency({
       </div>
       <div className="flex flex-col">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+            <div className="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
                       Octave
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
                       Note
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
                       Frequency
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
                       Interval
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
                       Wavelength
                     </th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="divide-y divide-gray-200 bg-white">
                   {renderFilteredData()}
                 </tbody>
               </table>

@@ -1,4 +1,5 @@
-import { Head, Html, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from 'next/document';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function Document() {
   return (
@@ -15,10 +16,11 @@ export default function Document() {
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
         />
       </Head>
-      <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
+      <body className="dark:bg-black flex h-full flex-col bg-zinc-50">
         <Main />
         <NextScript />
       </body>
+      <GoogleAnalytics gtmId="G-3YZHV8270X" />
     </Html>
-  )
+  );
 }
