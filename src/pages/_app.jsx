@@ -29,7 +29,7 @@ export default function App({ Component, pageProps, router }) {
       </div>
       <div className="relative">
         <Header />
-        <GoogleTagManager gtmId="GT-P8RCN9WM" />
+        <GoogleTagManager gtmId="G-NTPKLPE0L5" />
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
