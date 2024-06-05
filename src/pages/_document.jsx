@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import { GoogleTagManager } from '@next/third-parties/google';
 
 export default function Document() {
   return (
@@ -16,7 +15,6 @@ export default function Document() {
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
         />
       </Head>
-      <GoogleTagManager gtmId="GT-P8RCN9WM" />
       <body className="dark:bg-black flex h-full flex-col bg-zinc-50">
         <Main />
         <NextScript />
