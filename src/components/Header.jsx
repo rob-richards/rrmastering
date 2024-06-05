@@ -1,12 +1,12 @@
-import Image from 'next/legacy/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { Popover, Transition } from '@headlessui/react'
-import clsx from 'clsx'
+import Image from 'next/legacy/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Popover, Transition } from '@headlessui/react';
+import clsx from 'clsx';
 
-import { Container } from '@/components/Container'
-import logoImage from '@/images/rr-logo-new.svg'
-import { Fragment, useRef } from 'react'
+import { Container } from '@/components/Container';
+import logoImage from '@/images/rr-logo-new.svg';
+import { Fragment, useRef } from 'react';
 
 function CloseIcon(props) {
   return (
@@ -20,7 +20,7 @@ function CloseIcon(props) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function ChevronDownIcon(props) {
@@ -34,7 +34,7 @@ function ChevronDownIcon(props) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function MobileNavItem({ href, children }) {
@@ -44,7 +44,7 @@ function MobileNavItem({ href, children }) {
         {children}
       </Popover.Button>
     </li>
-  )
+  );
 }
 
 function MobileNavigation(props) {
@@ -64,7 +64,7 @@ function MobileNavigation(props) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Popover.Overlay className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80" />
+          <Popover.Overlay className="dark:bg-black/80 fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -91,7 +91,9 @@ function MobileNavigation(props) {
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/about">About</MobileNavItem>
                 {/* <MobileNavItem href="/blog">Blog</MobileNavItem> */}
-                <MobileNavItem href="/software/producers-cheat-sheet">Cheat Sheet</MobileNavItem>
+                <MobileNavItem href="/software/producers-cheat-sheet">
+                  Cheat Sheet
+                </MobileNavItem>
                 <MobileNavItem href="/book">Book a Session</MobileNavItem>
               </ul>
             </nav>
@@ -99,11 +101,11 @@ function MobileNavigation(props) {
         </Transition.Child>
       </Transition.Root>
     </Popover>
-  )
+  );
 }
 
 function NavItem({ href, children }) {
-  let isActive = useRouter().pathname === href
+  let isActive = usePathname().pathname === href;
 
   return (
     <li>
@@ -122,7 +124,7 @@ function NavItem({ href, children }) {
         )}
       </Link>
     </li>
-  )
+  );
 }
 
 function DesktopNavigation(props) {
@@ -135,13 +137,13 @@ function DesktopNavigation(props) {
         <NavItem href="/book">Book a Session</NavItem>
       </ul>
     </nav>
-  )
+  );
 }
 
 function clamp(number, a, b) {
-  let min = Math.min(a, b)
-  let max = Math.max(a, b)
-  return Math.min(Math.max(number, min), max)
+  let min = Math.min(a, b);
+  let max = Math.max(a, b);
+  return Math.min(Math.max(number, min), max);
 }
 
 function Logo({ large = false, className, ...props }) {
@@ -156,19 +158,16 @@ function Logo({ large = false, className, ...props }) {
         src={logoImage}
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
-        className={clsx(
-          'object-cover',
-          large ? 'h-16 w-16' : 'h-9 w-9'
-        )}
+        className={clsx('object-cover', large ? 'h-16 w-16' : 'h-9 w-9')}
         priority
       />
     </Link>
-  )
+  );
 }
 
 export function Header() {
-  let isHomePage = useRouter().pathname === '/';
-  let headerRef = useRef()
+  let isHomePage = usePathname().pathname === '/';
+  let headerRef = useRef();
 
   return (
     <>
@@ -190,7 +189,7 @@ export function Header() {
           >
             <div className="relative flex gap-4 bg-white">
               <Logo className="block w-72 origin-left" />
-              <div className="flex flex-1 justify-end md:justify-end items-center">
+              <div className="flex flex-1 items-center justify-end md:justify-end">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
@@ -200,5 +199,5 @@ export function Header() {
       </header>
       {isHomePage && <div style={{ height: 'var(--content-offset)' }} />}
     </>
-  )
+  );
 }
