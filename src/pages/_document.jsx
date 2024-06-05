@@ -16,7 +16,7 @@ export default function Document() {
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
         />
       </Head>
-      <GoogleTagManager gtmId="G-NTPKLPE0L5" />
+      <GoogleTagManager gtmId="GT-P8RCN9WM" />
       <body className="dark:bg-black flex h-full flex-col bg-zinc-50">
         <Main />
         <NextScript />

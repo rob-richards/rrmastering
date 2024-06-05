@@ -71,7 +71,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="px-6 antialiased" id="contact">
+    <div className="px-6 antialiased" id="contact" name="contact">
       <div className="mx-auto max-w-xl pt-10 md:max-w-2xl lg:py-12">
         <div className="mb-10 lg:text-center">
           <p className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">

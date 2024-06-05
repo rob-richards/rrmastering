@@ -5,6 +5,7 @@ import { Container } from '@/components/Container';
 import BPMToMs from '@/components/producers-cheat-sheet/BPMToMs';
 import TapTempo from '@/components/producers-cheat-sheet/TapTempo';
 import NoteToFrequency from '@/components/producers-cheat-sheet/NoteToFrequency';
+import Contact from '@/components/Contact';
 
 const ACTIONS = {
   BPM: 'bpm',
@@ -159,7 +160,7 @@ export default function CheatSheet() {
                       </li>
                     </ul>
                   </ul>
-                  <ul className="inline-block w-1/2 list-inside align-top sm:w-full">
+                  <ul className="inline-block w-1/2 list-inside align-top sm:mb-8 sm:w-full">
                     <li className="font-bold">Frequency</li>
                     <ul className="border-l-4 pl-3">
                       <li className="py-1">
@@ -167,6 +168,17 @@ export default function CheatSheet() {
                           'Note to Frequency',
                           'note-frequency'
                         )}
+                      </li>
+                      {/* <li className="pb-1">
+                        {renderScrollLink('EQ Presets', 'eq-presets')}
+                      </li> */}
+                    </ul>
+                  </ul>
+                  <ul className="inline-block w-1/2 list-inside align-top sm:w-full">
+                    <li className="font-bold">Book</li>
+                    <ul className="border-l-4 pl-3">
+                      <li className="py-1">
+                        {renderScrollLink('Book a Session', 'contact')}
                       </li>
                       {/* <li className="pb-1">
                         {renderScrollLink('EQ Presets', 'eq-presets')}
@@ -198,6 +210,8 @@ export default function CheatSheet() {
             </div>
           </div>
         </div>
+        <hr className="b-1" />
+        <Contact />
       </Container>
     </>
   );
