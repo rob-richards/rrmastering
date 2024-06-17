@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { Container } from '@/components/Container'
+import { Container } from '@/components/Container';
 
 function NavLink({ href, children }) {
   return (
@@ -10,7 +10,7 @@ function NavLink({ href, children }) {
     >
       {children}
     </Link>
-  )
+  );
 }
 
 export function Footer() {
@@ -23,17 +23,17 @@ export function Footer() {
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">About</NavLink>
                 {/* <NavLink href="/blog">Blog</NavLink> */}
-                <NavLink href="/software/producers-cheat-sheet">Cheat Sheet</NavLink>
+                <NavLink href="/cheat-sheet">Cheat Sheet</NavLink>
                 <NavLink href="/book">Book a Session</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Rob Richards Mastering. All rights
-                reserved.
+                &copy; {new Date().getFullYear()} Rob Richards Mastering. All
+                rights reserved.
               </p>
             </div>
           </Container.Inner>
         </div>
       </Container.Outer>
     </footer>
-  )
+  );
 }
