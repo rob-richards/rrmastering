@@ -2,8 +2,6 @@ import Image from 'next/legacy/image';
 import Head from 'next/head';
 import clsx from 'clsx';
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/react';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { AudioPlayer } from '@/components/AudioPlayer';
@@ -94,8 +92,6 @@ export default function Home({ articles }) {
         <AudioPlayer />
         <Contact />
       </Container>
-      <SpeedInsights />
-      <Analytics />
     </>
   );
 }

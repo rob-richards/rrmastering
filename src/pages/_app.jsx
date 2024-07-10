@@ -5,6 +5,9 @@ import { Header } from '@/components/Header';
 
 import { GoogleTagManager } from '@next/third-parties/google';
 
+// import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
+
 import '@/styles/tailwind.css';
 import 'focus-visible';
 
@@ -36,6 +39,9 @@ export default function App({ Component, pageProps, router }) {
         </main>
         <Footer />
       </div>
+
+      {/* <SpeedInsights /> */}
+      <Analytics />
     </>
   );
 }
