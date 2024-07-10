@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
-import { Analytics } from '@vercel/analytics/react';
+
 import { GoogleTagManager } from '@next/third-parties/google';
 
 import '@/styles/tailwind.css';
@@ -35,7 +35,6 @@ export default function App({ Component, pageProps, router }) {
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />
-        <Analytics />
       </div>
     </>
   );
