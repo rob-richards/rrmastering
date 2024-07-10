@@ -143,7 +143,7 @@ export default function CheatSheet() {
           content="Know the details of your song. BPM to Milliseconds. Note to frequency. Tap tempo."
         />
       </Head>
-      <Container noSpace={true}>
+      <Container nospace={true}>
         <div className="mx-auto my-10 px-0 pb-10">
           <div className="h-auto rounded-br-lg rounded-bl-lg bg-white p-0 pt-10 text-gray-900">
             <div className="relative grid grid-flow-row grid-cols-5 grid-rows-1 gap-4">

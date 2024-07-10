@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function Document() {
@@ -20,7 +19,6 @@ export default function Document() {
       <body className="dark:bg-black flex h-full flex-col bg-zinc-50">
         <Main />
         <NextScript />
-        <Analytics />
         <SpeedInsights />
       </body>
     </Html>
