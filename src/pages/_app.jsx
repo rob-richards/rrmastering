@@ -30,12 +30,12 @@ export default function App({ Component, pageProps, router }) {
       </div>
       <div className="relative">
         <Header />
-        <Analytics />
         <GoogleTagManager gtmId="G-NTPKLPE0L5" />
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />
+        <Analytics />
       </div>
     </>
   );
