@@ -16,13 +16,12 @@ export default function Document() {
           type="application/feed+json"
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
         /> */}
-
-        <SpeedInsights />
-        <Analytics />
       </Head>
       <body className="dark:bg-black flex h-full flex-col bg-zinc-50">
         <Main />
         <NextScript />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </Html>
   );
