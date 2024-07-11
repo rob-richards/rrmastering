@@ -14,10 +14,11 @@ import { Link as RsLink } from 'react-scroll';
 function Hero() {
   return (
     <>
-      <div className="grid grid-cols-5 gap-4">
-        <div className="col-span-5 col-start-1 md:col-span-3 md:col-start-2">
-          <h1 className="w-full text-center text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Don't hope your music translates, know that it will.
+      <div className="grid grid-cols-1 gap-4">
+        <div className="col-span-1 col-start-1">
+          <h1 className="w-full text-center text-5xl font-bold  tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            Don't hope your music translates, <br />
+            know that it will.
           </h1>
         </div>
       </div>
