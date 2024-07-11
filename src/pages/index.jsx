@@ -85,7 +85,7 @@ export default function Home({ articles }) {
           content="I'm Rob, a mastering engineer from Nashville, TN. I make music sound amazing everywhere it's heard. Headphones, car, laptop, surround sound. I make sure it translates so the listener can connect with your music."
         />
       </Head>
-      <Container className="mt-16 mb-16 flex w-full md:mt-24">
+      <Container className="mt-20 mb-16 flex w-full md:mt-20">
         <Hero />
       </Container>
       <Photos />
