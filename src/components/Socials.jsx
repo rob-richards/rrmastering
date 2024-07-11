@@ -43,7 +43,7 @@ export default function Socials() {
       <Container className="">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <SocialLink
-            href="https://www.instagram.com/robrichardsmastering/"
+            href="https://www.instagram.com/robwrichards/"
             icon={InstagramIcon}
             className=""
           >

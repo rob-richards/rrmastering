@@ -1,16 +1,16 @@
-import Image from 'next/legacy/image'
-import Head from 'next/head'
-import Link from 'next/link'
-import clsx from 'clsx'
+import Image from 'next/legacy/image';
+import Head from 'next/head';
+import Link from 'next/link';
+import clsx from 'clsx';
 
-import { Container } from '@/components/Container'
+import { Container } from '@/components/Container';
 import {
   TwitterIcon,
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-} from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+} from '@/components/SocialIcons';
+import portraitImage from '@/images/portrait.jpg';
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -24,7 +24,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
         <span className="ml-4">{children}</span>
       </Link>
     </li>
-  )
+  );
 }
 
 function MailIcon(props) {
@@ -35,7 +35,7 @@ function MailIcon(props) {
         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
       />
     </svg>
-  )
+  );
 }
 
 export default function About() {
@@ -78,7 +78,7 @@ export default function About() {
                 Follow on Twitter
               </SocialLink>
               <SocialLink
-                href="https://www.instagram.com/robrichardsmastering/"
+                href="https://www.instagram.com/robwrichards/"
                 icon={InstagramIcon}
                 className="mt-4"
               >
@@ -96,5 +96,5 @@ export default function About() {
         </div>
       </Container>
     </>
-  )
+  );
 }

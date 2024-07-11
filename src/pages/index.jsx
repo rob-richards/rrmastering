@@ -16,7 +16,7 @@ function Hero() {
     <>
       <div className="grid grid-cols-5 gap-4">
         <div className="col-span-5 col-start-1 md:col-span-3 md:col-start-2">
-          <h1 className="w-full text-center text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          <h1 className="w-full text-center text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Don't hope your music translates, know that it will.
           </h1>
         </div>
@@ -29,7 +29,7 @@ function Hero() {
           >
             <RsLink
               activeClass="active"
-              className={''}
+              className={'text-xl'}
               to={'contact'}
               spy
               smooth
@@ -54,7 +54,7 @@ function Photos() {
           <div
             key={artist.song}
             className={clsx(
-              'w-100 relative aspect-[10/10] flex-none overflow-hidden bg-zinc-100 dark:bg-zinc-800'
+              'w-100 relative aspect-[10/10] flex-none space-x-2 overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800'
             )}
           >
             <Image
