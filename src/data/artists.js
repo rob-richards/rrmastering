@@ -48,9 +48,29 @@ const artists = [
     song: 'Under The Tree EP',
   },
   {
-    artwork: darienWeddingRings,
-    artist: 'Darien Noel',
-    song: 'Wedding Rings',
+    artwork: midnightSouth,
+    artist: 'Midnight South',
+    song: 'I Want It All',
+  },
+  {
+    artwork: sydneyLane,
+    artist: 'Sydney Lane',
+    song: 'EP',
+  },
+  {
+    artwork: claireMccarty,
+    artist: 'Claire McCarty',
+    song: 'Innocence',
+  },
+  {
+    artwork: makerLee,
+    artist: 'Maker Lee',
+    song: 'Downfall',
+  },
+  {
+    artwork: yugoMemory,
+    artist: 'Yugo',
+    song: 'Memory',
   },
   {
     artwork: jonThisIsWar,
@@ -76,16 +96,6 @@ const artists = [
     artwork: zachEmptyCups,
     artist: 'Zach Sines',
     song: 'Empty Cups',
-  },
-  {
-    artwork: sydneyLane,
-    artist: 'Sydney Lane',
-    song: 'EP',
-  },
-  {
-    artwork: claireMccarty,
-    artist: 'Claire McCarty',
-    song: 'Innocence',
   },
   {
     artwork: untitledLifeline,
@@ -133,11 +143,6 @@ const artists = [
     song: 'Common Sense',
   },
   {
-    artwork: makerLee,
-    artist: 'Maker Lee',
-    song: 'Downfall',
-  },
-  {
     artwork: frisbeeCarwashKiss,
     artist: 'Frisbee Club',
     song: 'Carwash Kiss',
@@ -176,11 +181,6 @@ const artists = [
     artwork: untitledJustToBeClose,
     artist: 'Untitle Worship',
     song: 'Just To Be Close',
-  },
-  {
-    artwork: yugoMemory,
-    artist: 'Yugo',
-    song: 'Memory',
   },
   {
     artwork: untitledFullyPersuaded,

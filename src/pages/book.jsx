@@ -12,7 +12,7 @@ export default function Book() {
         <title>Book a Session | Rob Richards Mastering</title>
         <meta
           name="description"
-          content="Things I've made trying to put my dent in the universe."
+          content="Book a mastering session with Rob Richards!"
         />
       </Head>
       <SimpleLayout>

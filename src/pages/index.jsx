@@ -55,7 +55,7 @@ function Photos() {
           <div
             key={artist.song}
             className={clsx(
-              'w-100 relative aspect-[10/10] flex-none space-x-2 overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800'
+              'w-100 relative aspect-[10/10] flex-none space-x-2 overflow-hidden bg-zinc-100 dark:bg-zinc-800'
             )}
           >
             <Image
