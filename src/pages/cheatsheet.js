@@ -147,7 +147,7 @@ export default function CheatSheet() {
         <div className="mx-auto my-10 px-0 pb-10">
           <div className="h-auto rounded-br-lg rounded-bl-lg bg-white p-0 pt-0 text-gray-900">
             <div className="relative grid grid-flow-row grid-cols-5 grid-rows-1 gap-4">
-              <section className="col-span-5 p-5 pl-0 sm:col-span-1 sm:mb-6">
+              <section className="col-span-5 p-5 pl-0 pr-0 sm:col-span-1 sm:mb-6">
                 <div className="sticky top-6">
                   <ul className="inline-block w-1/2 list-inside sm:mb-8 sm:w-full">
                     <li className="font-bold">Time</li>
@@ -174,11 +174,28 @@ export default function CheatSheet() {
                       </li> */}
                     </ul>
                   </ul>
-                  <ul className="inline-block w-1/2 list-inside align-top sm:w-full">
-                    <li className="font-bold">Book</li>
-                    <ul className="border-l-4 pl-3">
+                  <ul className="inline-block w-full list-inside align-top">
+                    <li className="hidden font-bold md:block">Book</li>
+                    <ul className="border-0 pl-3 md:border-l-4">
                       <li className="py-1">
-                        {renderScrollLink('Book a Session', 'contact')}
+                        <p className="hidden md:block">
+                          {renderScrollLink('Book a Session', 'contact')}
+                        </p>
+
+                        <p className="block sm:hidden">
+                          <RsLink
+                            activeClass="active"
+                            className="ml-auto mr-auto mt-8 block w-40 flex-none rounded-lg bg-sky-500 p-2 text-center font-semibold text-white shadow-md hover:bg-sky-600 active:bg-sky-800"
+                            to={'contact'}
+                            spy
+                            smooth
+                            offset={0}
+                            duration={500}
+                            saveHashHistory={false}
+                          >
+                            Book a Session
+                          </RsLink>
+                        </p>
                       </li>
                       {/* <li className="pb-1">
                         {renderScrollLink('EQ Presets', 'eq-presets')}
