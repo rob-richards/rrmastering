@@ -36,7 +36,7 @@ export default function ArticlesIndex({ articles }) {
   return (
     <>
       <Head>
-        <title>Articles - Rob Richards</title>
+        <title>Blog - Rob Richards</title>
         <meta
           name="description"
           content="Thoughts and Insights on Producing, Mixing, Masting, and more."
