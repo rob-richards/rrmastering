@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import { Container } from '@/components/Container';
 import { formatDate } from '@/lib/formatDate';
 import { Prose } from '@/components/Prose';
+import Link from 'next/link';
 
 function ArrowLeftIcon(props) {
   return (
@@ -24,7 +25,7 @@ export function ArticleLayout({
   isRssFeed = false,
   previousPathname,
 }) {
-  let router = usePathname();
+  let router = useRouter();
 
   if (isRssFeed) {
     return children;
@@ -57,6 +58,21 @@ export function ArticleLayout({
               </header>
               <Prose className="mt-8">{children}</Prose>
             </article>
+            <div className="prose border-t-2 pt-4">
+              <h2 className="text-2xl font-bold">
+                Need professional mastering for your music?
+              </h2>
+              If you're looking for a professional mastering engineer to help
+              bring your song across the finish line, I'd love to be apart and
+              make your tracks sound their absolute best!{' '}
+              <Link
+                className="text-sky-400"
+                href="https://robrichardsmastering.com/book"
+              >
+                Get in touch here
+              </Link>
+              , and let's work together!
+            </div>
           </div>
         </div>
       </Container>
