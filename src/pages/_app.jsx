@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -33,7 +33,7 @@ export default function App({ Component, pageProps, router }) {
       </div>
       <div className="relative">
         <Header />
-        <GoogleTagManager gtmId="G-NTPKLPE0L5" />
+        <GoogleAnalytics gaId="G-NTPKLPE0L5" />
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
